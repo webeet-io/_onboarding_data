@@ -84,4 +84,23 @@ Each onboarding day follows the same structure:
 
 ---
 
+
+## 📚 Additional Sources
+
+Feel free to explore **extra learning materials** during onboarding or at any point throughout your internship. These resources are meant to help you grow and expand your understanding at your own pace.
+
+📁 **Explore curated resources here:** [`/sources`](./sources)
+
+Remember — this internship is for **your growth**. The more you engage, the more you’ll gain.
+
+---
+
+## 🤝 Reach Out to Team Members
+
+We’re here to help you **learn** and **build something great together**.
+
+- Don’t hesitate to reach out to your **Team Lead** or any **Senior Data Specialists**.
+- We welcome all questions — **there are no stupid questions**, and **mistakes are part of the process**.
+- Collaboration and open communication are key to succeeding at Webeet.
+---
 We’re thrilled to see what you’ll build and how you’ll grow this week. Let’s make it a productive and insightful start to your journey 🚀
