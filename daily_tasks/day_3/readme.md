@@ -75,5 +75,25 @@ In your notebook, write and execute SQL queries to answer:
 3. The notebook should include:
    - Connection setup (safe credentials handling)
    - SQL queries and results
-   - Comme
+   - Commentary or markdown cells explaining what each query shows
+   - Summary of insights
 
+4. Create a **Pull Request** with your work  
+5. Comment on the GitHub issue with a link to your PR
+
+---
+
+## 🔗 Related GitHub Issue
+
+Track your work and ask questions here:  
+👉 [Day 3 – SQL Practice via Python](https://github.com/webeet-io/_onboarding_data/issues/5)
+
+---
+
+## ⏳ Time Estimate
+
+This task should take about **4–5 hours**, including database setup time.
+
+---
+
+Have fun blending SQL with Python — this is where analysis becomes superpowered! 💥🐍🔗
