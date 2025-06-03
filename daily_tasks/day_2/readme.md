@@ -52,7 +52,7 @@ By the end of the day, please:
 ## 🔗 Related GitHub Issue
 
 Track this task, ask questions, and link your PR here:  
-👉 **Issue #2 – [Data Onboarding] Day 2 - NYC School directory ** [https://github.com/webeet-io/_onboarding_data/issues/4]
+👉 [Day 2 - NYC School directory]([https://github.com/webeet-io/_onboarding_data/issues/4])
 
 ---
 
