@@ -48,4 +48,4 @@ Below is a description of the key columns found in the high school directory dat
 ---
 
 📌 Use this table as a reference when analyzing or cleaning the dataset in Day 2’s Python task.
-
+Link to original data from Kaggle: [https://www.kaggle.com/datasets/new-york-city/nyc-high-school-directory?select=doe-high-school-directory-2013-2014.csv]
