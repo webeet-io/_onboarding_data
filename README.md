@@ -63,10 +63,10 @@ Each onboarding day follows the same structure:
 ### 🧑‍💻 Branch Structure
 
 - Each intern will work in their **own personal branch**:  
-  `intern-[your-name]`
+  `[your-name]`
   
 - For each daily task, create a **sub-branch** from your personal branch:  
-  `intern-[your-name]/day-1`, `intern-[your-name]/day-2`, etc.
+  `[your-name]/day-1`, `[your-name]/day-2`, etc.
 
 ### 📝 Issues and Tasks
 
