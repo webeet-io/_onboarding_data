@@ -1,6 +1,6 @@
 # 🎉 Day 0 – Welcome to the Internship!
 
-Congratulations and welcome to the **WeBit Internship Program**!  
+Congratulations and welcome to the **Webeet Internship Program**!  
 We’re genuinely excited to have you here — you're officially part of the team now. 💜
 
 ---
