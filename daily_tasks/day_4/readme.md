@@ -22,7 +22,7 @@ By completing this task, you’ll practice translating raw CSV data into relatio
 
 ## 📂 Where the Data Lives
 
-You’ll find the dataset in this directory:
+You’ll find the dataset in this directory: daily_tasks/day_4/day_4_datasets
 
 
 ---
