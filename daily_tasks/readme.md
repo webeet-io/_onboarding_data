@@ -5,17 +5,16 @@ Welcome to your 4-day onboarding sprint! This program is designed to introduce y
 In every `daily_tasks/day_X/` folder, you'll find:
 - 🔗 A link to the task's GitHub Issue (in the README or markdown files)
 - 📂 All necessary datasets, database connection details, and starter materials
-- 🧑‍🏫 Guided explanations and walkthroughs by a team lead during the morning masterclass
+
++ 🧑‍🏫 You'll get guided explanations and walkthroughs by a team lead during the morning masterclass.
 
 ---
 
 ## 📍 What to Expect Each Day
 
 ### 📌 Day 0 – Onboarding & Setup
-Get access to the GitHub repository and Discord/ 
+Get access to the GitHub repository and Discord. Meet the team. 
 
-
-> 🧰 Skills: meeting the team
 ---
 
 ### 📊 Day 1 – Data Exploration & Submission
@@ -26,7 +25,7 @@ You’ll answer simple analytical questions and share your work.
 
 ---
 
-### 🧹 Day 2 – Data Cleaning & Preparation
+### 🧹 Day 2 – Data Cleaning & Preparation with Python
 Work with messy data. You’ll clean, transform, and prepare a dataset for analysis.  
 Handle duplicates, missing values, naming conventions, and outliers.
 
