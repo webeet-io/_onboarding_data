@@ -1,11 +1,11 @@
-# 🎉 Day 0 – Welcome to the Internship!
+# 🎉 Day 1 – Welcome to the Internship!
 
 Congratulations and welcome to the **Webeet Internship Program**!  
 We’re genuinely excited to have you here — you're officially part of the team now. 💜
 
 ---
 
-## ✅ Your Day 0 Checklist
+## ✅ Your Day 1 Checklist
 
 Today is all about **getting in the mood**, meeting the team, and making sure your access works. There’s no task to submit — just settle in!
 
@@ -21,7 +21,7 @@ Today is all about **getting in the mood**, meeting the team, and making sure yo
 
 ## 🚀 What’s Next?
 
-- You’ll start working with real data from **Day 1** — no pressure, just learning.
+- You’ll start working with real data from **Day 2** — no pressure, just learning.
 - Every morning we’ll have a **masterclass session** to walk through the day’s task.
 - All the support you need will be there: docs, walkthroughs, and friendly humans.
 
