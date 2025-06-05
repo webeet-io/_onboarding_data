@@ -1,4 +1,4 @@
-# 🎉 Day 1 – Welcome to the Internship!
+# 🎉 Day 0 – Welcome to the Internship!
 
 Congratulations and welcome to the **Webeet Internship Program**!  
 We’re genuinely excited to have you here — you're officially part of the team now. 💜
