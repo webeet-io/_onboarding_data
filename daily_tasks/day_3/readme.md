@@ -28,52 +28,30 @@ You’ll be querying these tables:
 ---
 
 ## 🔌 Connecting to the Database
-
-Set up your connection using one of the following:
-
-- `sqlalchemy` + `psycopg2`  
-- `sqlite3` (if working locally with a SQLite dump)  
-- `ipython-sql` (optional)
-
-📘 Use the setup guide in:  
-📁 `sources/db_connection_guide.md`
-
-⚠️ Do not hardcode credentials — use `.env` files or environment variables instead!
+Clone repo to your local machine. 
+Set up your connection in Python using one of the following as provided in the the setup guide:  
+📁 `daily_tasks/day_3/day3_sql_combined_with_creds.ipynb`
+Make sure that connection works and you can query the data. 
 
 ---
+## 🔗 Related GitHub Issue
 
-## ✅ What to Do
+Complete the task following the instructions here: 
+👉 [Day 3 – SQL Practice via Python](https://github.com/webeet-io/_onboarding_data/issues/5)
 
-In your notebook, write and execute SQL queries to answer:
-
-### 🧮 School Distribution
-- How many schools are there in each borough?
-
-### 🎓 Language Learners
-- What is the average percentage of **English Language Learners (ELL)** per borough?
-
-### 🏫 School Size
-- Which 10 schools have the **highest total enrollment**?
-
-### ⚠️ Safety + Poverty
-- List schools with **>10 reported incidents** and **>50% of students on free/reduced lunch (FRPL)**
-
-### 🔗 Joining Tables
-- Join `school_demographics` and `high_school_directory` to find:
-  - Schools in **Queens** where **>20% of students have disabilities**
 
 ---
 
 ## 📁 What to Submit
 
-1. In your sub-branch (`intern-[your-name]/day-3`), go to:  
+1. In your sub-branch (`[your-name]/day-3`), go to:  
    📁 `daily_tasks/day_3/`
 
 2. Add your notebook named:  
    📄 `day3_sql_analysis.ipynb`
 
 3. The notebook should include:
-   - Connection setup (safe credentials handling)
+   - Connection setup 
    - SQL queries and results
    - Commentary or markdown cells explaining what each query shows
    - Summary of insights
@@ -83,12 +61,7 @@ In your notebook, write and execute SQL queries to answer:
 
 ---
 
-## 🔗 Related GitHub Issue
 
-Track your work and ask questions here:  
-👉 [Day 3 – SQL Practice via Python](https://github.com/webeet-io/_onboarding_data/issues/5)
-
----
 
 ## ⏳ Time Estimate
 
