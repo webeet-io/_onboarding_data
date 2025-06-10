@@ -1,13 +1,13 @@
 ## Day 1 – School Incident Analysis
 
-🔗 [My Google Sheet](https://docs.google.com/spreadsheets/d/...)
+🔗 [My Google Sheet](https://docs.google.com/spreadsheets/d/1C9Vs_EgOBjE50rUZRJexIddULbdFF1LhKMA11JtPOQ8/edit?usp=sharing)
 
 ### Answers:
-- Total rows: 22,785
-- Unique schools: 364
-- Most frequent incident type: “Disorderly Conduct”
-- Bronx incident %: 21.3%
+- Total rows: 6311
+- Unique schools: 1890
+- Most frequent incident type: Non-criminal incidents
+- % of incident in Bronx: 28.24%
 
 ### Observations:
-- Some schools report far more incidents than others, regardless of size.
-- The number of incidents decreased slightly year over year.
+- The number of incidents decreased slightly year over year but there is increase in the non-criminal incidents.
+- 60% of the incidents were reported in Bronx and Brooklyn
