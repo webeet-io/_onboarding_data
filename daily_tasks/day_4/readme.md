@@ -1,6 +1,6 @@
-# 🧮 Day 5 – Data Integration & Schema Design
+# 🧮 Day 4 – Data Integration & Schema Design
 
-Welcome to Day 5! Today’s task focuses on integrating a new dataset into an existing PostgreSQL database. You’ll take a deeper dive into understanding dataset structure, identifying relevant columns, cleaning messy data, and designing a script-based workflow to load it efficiently.
+Welcome to Day 4! Today’s task focuses on integrating a new dataset into an existing PostgreSQL database. You’ll take a deeper dive into understanding dataset structure, identifying relevant columns, cleaning messy data, and designing a script-based workflow to load it efficiently.
 
 ---
 
@@ -14,7 +14,6 @@ You’ll work with a real-world (and purposefully messy) SAT results dataset. Yo
 - Clean and preprocess the data using Python.
 - Prepare the data for database insertion.
 - Write a Python script that connects to the database and appends the cleaned data.
-- Establish and enforce a primary key or foreign key relationship using the `DBN` field.
 
 By completing this task, you’ll practice translating raw CSV data into relational database entries while thinking critically about schema and data integrity.
 
@@ -29,9 +28,9 @@ You’ll find the dataset in this directory: daily_tasks/day_4/day_4_datasets
 
 ## ✅ What to Submit
 
-By the end of Day 5, please submit:
+By the end of Day 4, please submit:
 
-- A cleaned version of the dataset as a `.csv` or `.py` output
+- A cleaned version of the dataset as a `.csv` output
 - A Python script that:
   - Cleans/preprocesses the raw dataset
   - Appends it to the PostgreSQL database
@@ -40,7 +39,7 @@ By the end of Day 5, please submit:
   - Any challenges you encountered
   - SQL schema or notes about integration strategy (especially if you adjusted table structure)
 
-📌 Save this Markdown file in the **Day 5 task directory**, not inside the dataset folder.
+📌 Save these  files in new **day_4_task** folder, not inside the dataset folder.
 
 Then:
 
@@ -52,7 +51,7 @@ Then:
 ## 🔗 Related GitHub Issue
 
 Track your task, ask questions, and share your submission here:  
-👉 **Issue #4 – Day 5 Task**
+👉 **Issue #4 – Day 4 Task**
 
 ---
 
