@@ -2,7 +2,7 @@
  
 Answers:
 Total rows: 6310
-Unique schools: 2268
+Unique schools: 1890
 Most frequent incident type: "Non-criminal-types" with a count of 11,772 Incidents
 Bronx incident %: 28.24%%
 
