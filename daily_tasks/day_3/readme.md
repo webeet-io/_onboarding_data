@@ -23,7 +23,8 @@ You’ll be querying these tables:
 
 - `high_school_directory` – School names, locations, types, programs
 - `school_demographics` – Enrollment data, ELL, FRPL, disabilities, etc.
-- `school_safety_report` – Reported incidents by type and location
+- `school_safety_report` – Reported incidents by type and location.
+  
 You can find description of these tables here : https://docs.google.com/spreadsheets/d/1-GBa4-i2ZJqc3lWVuefVKwS6o7jVHu2WWMRBEcJn-y8/edit?usp=sharing
 
 ---
