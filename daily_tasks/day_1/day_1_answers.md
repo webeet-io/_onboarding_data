@@ -1,9 +1,10 @@
 # Day 1 – School Incident Analysis
 
-🔗 **[My Google Sheet]([https://docs.google.com/spreadsheets/d/1MmHjvpX1gJ217gLekeJ8pzZklFOZHc_cIO881VA1970/edit?usp=sharing])**
+🔗 **[My Google Sheet](https://docs.google.com/spreadsheets/d/1MmHjvpX1gJ217gLekeJ8pzZklFOZHc_cIO881VA1970/edit?usp=sharing)**
 
 ## Dataset Overview
-This analysis explores NYC school safety incident data containing information about different types of incidents (non-criminal, property, and violent) across schools in all five boroughs from 2013-2016.
+This analysis explores NYC school safety incident data containing information about different types of incidents (non-criminal, property,
+and violent) across schools in all five boroughs from 2013-2016.
 
 ## Data Cleaning Process
 Before beginning the analysis, I cleaned the column headers according to the requirements:
@@ -11,7 +12,8 @@ Before beginning the analysis, I cleaned the column headers according to the req
 - **Replaced spaces with underscores:** "Building Code" → "building_code"
 - **Removed special characters:** "# Schools" → "schools"
 
-**Method:** Inserted a new row above the original headers, manually entered cleaned names for all 32 columns (A through AF), then deleted the original header row.
+**Method:** Inserted a new row above the original headers, manually entered cleaned names for all 32 columns (A through AF),
+then deleted the original header row.
 
 ---
 
@@ -68,24 +70,17 @@ Before beginning the analysis, I cleaned the column headers according to the req
 
 ### Question 4: What % of incidents occurred in the Bronx?
 
-**Approach:** Calculated the percentage of actual incident cases that occurred in the Bronx by summing all incident types for Bronx schools and dividing by the total incidents citywide.
+**Approach:** Used COUNTIF to count schools in the Bronx, then calculated the percentage of total records.
 
-**Formula Used:** `=(SUMIF(Y2:Y6311,"BRONX",O2:O6311)+SUMIF(Y2:Y6311,"BRONX",P2:P6311)+SUMIF(Y2:Y6311,"BRONX",Q2:Q6311))/(SUM(O2:O6311)+SUM(P2:P6311)+SUM(Q2:Q6311))*100`
+**Formula Used:** `=COUNTIF(Y2:Y6311,"BRONX")/6310*100`
 
 **Explanation:**
-- SUMIF functions calculate total incidents for Bronx schools across all three incident types:
-  - Non-criminal incidents: `SUMIF(Y2:Y6311,"BRONX",O2:O6311)`
-  - Property incidents: `SUMIF(Y2:Y6311,"BRONX",P2:P6311)`
-  - Violent incidents: `SUMIF(Y2:Y6311,"BRONX",Q2:Q6311)`
-- Denominator sums all incidents citywide: `SUM(O2:O6311)+SUM(P2:P6311)+SUM(Q2:Q6311)`
-- Result shows percentage of actual incident cases, not percentage of schools
+- Column Y (`borough_name`) contains borough names in uppercase format
+- COUNTIF counts all rows where borough_name equals "BRONX"
+- Divided by total rows (6,310) and multiplied by 100 for percentage
+- Note: Used column Y instead of column G as Y contained the actual borough names
 
-**Calculation Breakdown:**
-- Total Bronx incidents: 5,594
-- Total citywide incidents: 19,434
-- Percentage: 5,594 ÷ 19,434 × 100 = 28.78%
-
-**Result:** **28.78% of incidents occurred in the Bronx**
+**Result:** **24.58% of incidents occurred in the Bronx**
 
 ---
 
@@ -101,7 +96,8 @@ Before beginning the analysis, I cleaned the column headers according to the req
 - Manhattan: `=COUNTIF(Y2:Y6311,"MANHATTAN")` → **1,247 incidents (19.8%)**
 - Queens: `=COUNTIF(Y2:Y6311,"QUEENS")` → **1,189 incidents (18.8%)**
 
-**Key Insight:** Brooklyn has significantly more incident records than other boroughs - about 32% more than the Bronx, the second-highest borough. This could indicate either higher incident rates or more comprehensive reporting in Brooklyn schools.
+**Key Insight:** Brooklyn has significantly more incident records than other boroughs - about 32% more than the Bronx,
+the second-highest borough. This could indicate either higher incident rates or more comprehensive reporting in Brooklyn schools.
 
 ### Finding 2: Year-over-Year Trend Analysis
 
@@ -112,7 +108,9 @@ Before beginning the analysis, I cleaned the column headers according to the req
 - 2014-15: `=COUNTIF(A2:A6311,"2014-15")` → **2,082 incidents**
 - 2015-16: `=COUNTIF(A2:A6311,"2015-16")` → **2,069 incidents**
 
-**Key Insight:** There's a consistent **downward trend** in incident reporting over the three-year period, with approximately 90 fewer incidents recorded each year. This could suggest improving school safety conditions, changes in reporting practices, or enhanced intervention programs.
+**Key Insight:** There's a consistent **downward trend** in incident reporting over the three-year period, with approximately 90
+fewer incidents recorded each year. This could suggest improving school safety conditions, changes in reporting practices,
+or enhanced intervention programs.
 
 ---
 
@@ -122,12 +120,13 @@ Before beginning the analysis, I cleaned the column headers according to the req
 - **Total data records:** 6,310
 - **Unique schools represented:** 1,890
 - **Most common incident type:** Non-criminal (11,772 total)
-- **Bronx representation:** 28.78% of all incidents
+- **Bronx representation:** 24.58% of all records
 
 ### Notable Observations:
 - **Geographic disparity:** Brooklyn accounts for nearly one-third of all incident records
 - **Positive trend:** Steady annual decrease in reported incidents (2013-2016)
-- **Incident type distribution:** Non-criminal incidents are 2.6x more frequent than property incidents and 3.7x more frequent than violent incidents
+- **Incident type distribution:** Non-criminal incidents are 2.6x more frequent than property incidents and 3.7x more
+-  frequent than violent incidents
 
 ---
 
@@ -135,6 +134,8 @@ Before beginning the analysis, I cleaned the column headers according to the req
 
 **Data Range:** All formulas used the range A2:A6311 (or corresponding columns) to exclude headers and capture the complete dataset.
 
-**Data Quality:** The dataset appears well-structured with consistent formatting, though some calculated averages returned division errors suggesting null values in certain numeric fields.
+**Data Quality:** The dataset appears well-structured with consistent formatting, though some calculated averages returned division
+errors suggesting null values in certain numeric fields.
 
-**Methodology:** Analysis focused on aggregated counts rather than individual incident details, as the dataset structure represents summary statistics per school rather than individual incident records.
+**Methodology:** Analysis focused on aggregated counts rather than individual incident details, as the dataset structure represents
+summary statistics per school rather than individual incident records.
