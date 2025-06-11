@@ -1,6 +1,6 @@
 ## NYC High School Directory
 
-Please click [here](http://localhost:8890/notebooks/day_2_analysis%20.ipynb#General-Overview:) to see coding.
+Please click [here](https://github.com/webeet-io/_onboarding_data/blob/mohammad-akram-zaki-day-2/day_2_analysis%20.ipynb) to see coding.
 
 ## Following tasks are done: 
 1. Import dataset in to Jupyter Notebook.
