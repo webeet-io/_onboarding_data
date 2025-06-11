@@ -30,5 +30,5 @@ Please click [here](https://github.com/webeet-io/_onboarding_data/blob/mohammad-
                                             Manhattan	       1259
                                             Queens	          946
                                             Staten Island	   120
-6. Bar Chart: please see: [chart]
+6. Bar Chart: please see: [chart](https://github.com/webeet-io/_onboarding_data/blob/mohammad-akram-zaki-day-2/Num%20of%20School%20per%20borough%20Chart.png)
 
