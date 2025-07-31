@@ -1,6 +1,33 @@
+# 🎉 Day 1 – Welcome to the Internship!
+
+Congratulations and welcome to the **Webeet Internship Program**!  
+We’re genuinely excited to have you here — you're officially part of the team now. 💜
+
+---
+
+## ✅ Your Day 1 Checklist
+
+Today is all about **getting in the mood**, meeting the team, and making sure your access works. 
+
+### 👇 If you’re reading this, it means:
+- [x] You have access to the GitHub repo ✅
+
+### Other things to check:
+- [ ] You’ve joined our **Slack** server (where most team communication happens)
+- [ ] You’ve met your **team lead** and know who to reach out to with questions
+- [ ] You’ve said hi in the intro channel (don't be shy 😄)
+
+---
+
+## 🚀 What’s Next?
+
+- You’ll start working with real data today — no pressure, just learning.
+- Every morning we’ll have a **masterclass session** to walk through the day’s task.
+- All the support you need will be there: docs, walkthroughs, and friendly humans.
+
 # 📊 Day 1 – Onboarding Task
 
-Welcome to Day 1! Today’s task is designed to get you comfortable working with a real dataset and making your first contribution.
+Today’s task is designed to get you comfortable working with a real dataset and making your first contribution.
 
 ---
 
