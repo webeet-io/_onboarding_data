@@ -25,21 +25,21 @@ Here’s what to do:
 │ └── README.md ← Task description + insights <br>
 │ └── visuals/ ← Bar charts or summaries <br>
 │ └── notebook.ipynb <br>
+│ <br>
+├── 📁 database_queries/ ← Former Day 3 <br>
+│ └── README.md ← SQL queries via Python + outcomes <br>
+│ └── queries.ipynb <br>
+│ <br>
+├── 📁 database_population/ ← Former Day 4 <br>
+│ └── README.md ← Data cleaning + upload logic <br>
+│ └── cleaned_data.csv <br>
+│ └── upload_script.py <br>
+│ <br>
+├── 📁 assets/ ← Optional: project visuals, screenshots <br>
 │
-├── 📁 database_queries/ ← Former Day 3
-│ └── README.md ← SQL queries via Python + outcomes
-│ └── queries.ipynb
-│
-├── 📁 database_population/ ← Former Day 4
-│ └── README.md ← Data cleaning + upload logic
-│ └── cleaned_data.csv
-│ └── upload_script.py
-│
-├── 📁 assets/ ← Optional: project visuals, screenshots
-│
-├── requirements.txt ← Dependencies list
-├── environment.yml ← (Optional) Conda environment file
-├── README.md ← Full project overview and summary
+├── requirements.txt ← Dependencies list <br>
+├── environment.yml ← (Optional) Conda environment file <br>
+├── README.md ← Full project overview and summary <br>
 
 
 ---
