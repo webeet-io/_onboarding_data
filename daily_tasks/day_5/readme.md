@@ -16,15 +16,15 @@ Here’s what to do:
 
 - ✅ **Restructure your folders** to reflect the *actions* you performed, not the day labels  
   For example:
-- 📁 nyc-schools-analysis/ ← Main project folder (GitHub repo root)
-├── 📁 incident_analysis/ ← Former Day 1
-│ └── README.md ← Explains task + key findings
-│ └── data/ ← Any related raw/cleaned data
-│
-├── 📁 school_directory_exploration/ ← Former Day 2
-│ └── README.md ← Task description + insights
-│ └── visuals/ ← Bar charts or summaries
-│ └── notebook.ipynb
+- 📁 nyc-schools-analysis/ ← Main project folder (GitHub repo root) <br>
+├── 📁 incident_analysis/ ← Former Day 1 <br>
+│ └── README.md ← Explains task + key findings <br>
+│ └── data/ ← Any related raw/cleaned data <br>
+│ <br>
+├── 📁 school_directory_exploration/ ← Former Day 2 <br>
+│ └── README.md ← Task description + insights <br>
+│ └── visuals/ ← Bar charts or summaries <br>
+│ └── notebook.ipynb <br>
 │
 ├── 📁 database_queries/ ← Former Day 3
 │ └── README.md ← SQL queries via Python + outcomes
