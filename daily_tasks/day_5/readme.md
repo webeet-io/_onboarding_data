@@ -16,10 +16,30 @@ Here’s what to do:
 
 - ✅ **Restructure your folders** to reflect the *actions* you performed, not the day labels  
   For example:
-📁 incident_analysis/
-📁 school_directory_exploration/
-📁 database_queries/
-📁 database_population/
+📁 nyc-schools-analysis/ ← Main project folder (GitHub repo root)
+├── 📁 incident_analysis/ ← Former Day 1
+│ └── README.md ← Explains task + key findings
+│ └── data/ ← Any related raw/cleaned data
+│
+├── 📁 school_directory_exploration/ ← Former Day 2
+│ └── README.md ← Task description + insights
+│ └── visuals/ ← Bar charts or summaries
+│ └── notebook.ipynb
+│
+├── 📁 database_queries/ ← Former Day 3
+│ └── README.md ← SQL queries via Python + outcomes
+│ └── queries.ipynb
+│
+├── 📁 database_population/ ← Former Day 4
+│ └── README.md ← Data cleaning + upload logic
+│ └── cleaned_data.csv
+│ └── upload_script.py
+│
+├── 📁 assets/ ← Optional: project visuals, screenshots
+│
+├── requirements.txt ← Dependencies list
+├── environment.yml ← (Optional) Conda environment file
+├── README.md ← Full project overview and summary
 
 
 ---
