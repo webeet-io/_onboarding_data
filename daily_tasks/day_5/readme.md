@@ -16,7 +16,7 @@ Here’s what to do:
 
 - ✅ **Restructure your folders** to reflect the *actions* you performed, not the day labels  
   For example:
-📁 nyc-schools-analysis/ ← Main project folder (GitHub repo root)
+- 📁 nyc-schools-analysis/ ← Main project folder (GitHub repo root)
 ├── 📁 incident_analysis/ ← Former Day 1
 │ └── README.md ← Explains task + key findings
 │ └── data/ ← Any related raw/cleaned data
