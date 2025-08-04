@@ -62,7 +62,7 @@ By the end of the day, please submit:
 ## 🔗 Related GitHub Issue
 
 Track the task, post questions, and link your work here:  
-👉 [Issue #1 – Day 1 Task](https://github.com/webeet-io/_onboarding_data/issues/1)
+👉 [Issue #1 – Day 1 Task](https://github.com/webeet-io/_onboarding_data/issues/82)
 
 ---
 ---
