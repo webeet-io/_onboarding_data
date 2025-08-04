@@ -49,7 +49,7 @@ Here’s what to do:
 - Link to your **personal GitHub repository** (must be public)
 - Pull Request in the cohort’s GitHub repo
 - Comment with both links in:  
-👉 **Issue #5 – Day 5 Task**
+👉 [**Issue #5 – Day 5 Task**](https://github.com/webeet-io/_onboarding_data/issues/81)
 ---
 
 ## ⏳ Estimated Time
