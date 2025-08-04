@@ -1,13 +1,17 @@
 ## Day 1 – School Incident Analysis
 
 🔗 [My Google Sheet](https://docs.google.com/spreadsheets/d/...)
+How many total rows are there?	6310	
 
-### Answers:
-- Total rows: 22,785
-- Unique schools: 364
-- Most frequent incident type: “Disorderly Conduct”
-- Bronx incident %: 21.3%
+How many unique schools are listed?	1196		
 
-### Observations:
-- Some schools report far more incidents than others, regardless of size.
-- The number of incidents decreased slightly year over year.
+What is the most frequent incident type?	
+  sum col o	11770	that's the most frequent
+  sum col m	1781	
+	sum col n	6936	
+	sum col p	4481	
+	sum col q	3180	
+ 
+What % of incidents occurred in the Bronx?	24.67%		
+			
+			
