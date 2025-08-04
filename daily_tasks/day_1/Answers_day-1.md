@@ -1,5 +1,8 @@
+## Day 1 – School Incident Analysis
+
 [Google Sheet](https://docs.google.com/spreadsheets/d/1rEyVWsB8gIjU0OMo6JT5XMlVygHv4jSL-oepnyG7nYU/edit?usp=sharing)
 
+### Answers:
 How many total rows are there?			6310	
 
 How many unique schools are listed?			2268	
