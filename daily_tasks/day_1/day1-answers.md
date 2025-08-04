@@ -6,7 +6,7 @@
 - Total rows: 6,310
 - Unique schools: 2,264
 - Most frequent incident type: “nocrim_n”
-- Bronx incident %: 24.67%
+- Bronx incident %: 28.38%
 
 ### Observations:
 - Brooklyn have most incidents
