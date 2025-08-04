@@ -4,7 +4,7 @@
 
 ### Answers:
 - Total rows: 6,310
-- Unique schools: 2,264
+- Unique schools: 1,369
 - Most frequent incident type: “nocrim_n”
 - Bronx incident %: 28.38%
 
