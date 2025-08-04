@@ -51,7 +51,7 @@ Then:
 ## 🔗 Related GitHub Issue
 
 Track your task, ask questions, and share your submission here:  
-👉 [**Issue #4 – Day 4 Task**](https://github.com/webeet-io/_onboarding_data/issues/6)
+👉 [**Issue #4 – Day 4 Task**](https://github.com/webeet-io/_onboarding_data/issues/85)
 
 ---
 
