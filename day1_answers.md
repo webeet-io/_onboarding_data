@@ -28,8 +28,9 @@ This report summarizes insights from a real-world dataset of school incidents, a
 
 ## 📌 Interesting Findings
 
-- Some schools operate from **multiple locations**, and some locations host **multiple schools**, indicating shared campuses or administrative overlaps.
+
 - There are notable outliers in incident rates — both **zero-incident schools** and those with **very high incidents per student**.
+
 - Normalized incident rates across boroughs show **less disparity** than raw totals suggest.
 
 ---
@@ -42,3 +43,4 @@ This report summarizes insights from a real-world dataset of school incidents, a
 ---
 
 *Prepared as part of a GitHub and data exploration onboarding task.*
+
