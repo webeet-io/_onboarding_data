@@ -1,13 +1,13 @@
 ## Day 1 – School Incident Analysis
 
-🔗 [My Google Sheet](https://docs.google.com/spreadsheets/d/1swOKzjxUHQ3vBxh7__1ul6kRqWCosGts5Za-JdngTf0/edit?usp=sharing)
+🔗 [My Google Sheet]((https://docs.google.com/spreadsheets/d/1swOKzjxUHQ3vBxh7__1ul6kRqWCosGts5Za-JdngTf0/edit?usp=sharing))
 
 ### Answers:
 Total Rows: 6,311
-Unique Schools: 2273
+Unique Schools: 1891
 Most Frequent Incident Type: nocrim_n (Non-criminal incidents)
 Total Count of This Type: 11,771
-% of Incidents in the Bronx: 0.0%
+% of Incidents in the Bronx: 28.24%
 
 ### Observations:
 Major Incidents:
