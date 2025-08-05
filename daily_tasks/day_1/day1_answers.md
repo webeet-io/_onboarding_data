@@ -4,7 +4,7 @@ https://docs.google.com/spreadsheets/d/19u7xw-TtiKlJIBv5pGkm3UdLd_m1wVcEKzpukwUH
 
 ### 📮 Answers
 - Total Rows: 6310
-- Unique Schools: 2272
+- Unique Schools: 1890
 - Most Frequent Type: Non-criminal crimes
 - Percentage of incidents in the Bronx: 28.24%
 
