@@ -18,7 +18,5 @@
 4. What % of incidents occurred in the Bronx?
 
    Ans: 28.29 %
-
 ### Observations:
-
    Ans:  The school with the highest number of reported incidents is DBN 31R450, with a total of 226 incidents across all three school years.
