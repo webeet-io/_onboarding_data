@@ -1,6 +1,6 @@
 https://docs.google.com/spreadsheets/d/1xFUTFT8ZeOcGruzCYhX62sccFBT-VkgZMl5LYMRt-5g/edit?gid=1472867911#gid=1472867911
 
-Total Rows: There are 6,314 total rows in the dataset.
+Total Rows: There are 6311 total rows in the dataset.
 
 Unique Schools: There are 1,893 unique schools listed in the dataset.
 
