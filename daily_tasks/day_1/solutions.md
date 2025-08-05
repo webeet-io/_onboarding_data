@@ -12,15 +12,15 @@
 6,310
 
 2. How many unique schools are listed? 
-2,222
+1890 for dbn, wich are unique identifiers.
 
-3. What is the most frequent incident type?
+4. What is the most frequent incident type?
 Non-Criminal Incidents are most frequent
 
-4. What % of incidents occurred in the Bronx?
+5. What % of incidents occurred in the Bronx?
 28.24%
 
-5. Interesting Findings:
+6. Interesting Findings:
 - The most dangerous postcode is **10456** based on the highest number of total incidents.
 - Postcode **10457** also has high incident rates across all categories.
 - Both 10456 and 10457 are located in the Bronx. 
