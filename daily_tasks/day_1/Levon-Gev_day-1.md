@@ -5,7 +5,7 @@
 ### Answers:
 How many total rows are there?			6310	
 
-How many unique schools are listed?			2268	
+How many unique schools are listed?			1890	
 
 What is the most frequent incident type?			non-criminal crimes 	11772
 
