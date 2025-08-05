@@ -1,6 +1,6 @@
 ## Day 1 – School Incident Analysis
 
-🔗 [My Google Sheet]((https://docs.google.com/spreadsheets/d/1swOKzjxUHQ3vBxh7__1ul6kRqWCosGts5Za-JdngTf0/edit?usp=sharing))
+🔗 [My Google Sheet](https://docs.google.com/spreadsheets/d/1swOKzjxUHQ3vBxh7__1ul6kRqWCosGts5Za-JdngTf0/edit?usp=sharing)
 
 ### Answers:
 Total Rows: 6,311
