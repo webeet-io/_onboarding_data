@@ -1,0 +1,36 @@
+Dataset Dimensions:
+
+Rows (Schools): 435
+
+Columns (Attributes): 69
+
+This dataset provides information about NYC high schools, including name, location, enrollment, and
+COLUMN CLEANING WITH BASIC PYTHON FUNCTION
+      CLEANING COLUMN NAMES
+hs_df.columns = [
+re.sub(r'[^a-zA-Z0-9_]', '', col.lower().replace(' ', '_'))
+for col in hs_df.columns
+Explanation python function
+
+Converts names to lowercase → e.g., School Name → school_name
+
+Replaces spaces with underscores → Total Students → total_students
+
+Removes special characters for consistency and compatibility
+KEY INSIGHT AND MENTRICS
+- Total schools with data: 426
+- Mean enrollment: ~704 students
+- Smallest school: 50 students
+- Largest school: 5,458 students
+- Median: 461 students
+
+School Distributio 
+Boroughs Present 5.
+Queens, Brooklyn, Bronx, Manhattan, Staten Island
+
+Interpritation
+There is a wide variance in school size (from 50 to over 5,000 students), suggesting NYC schools differ greatly in scale.
+
+Most schools fall under 700 students, indicating a prevalence of smaller school settings.
+
+Minor missing data (9 rows) in total_students can be imputed or excluded depending on the use case.
