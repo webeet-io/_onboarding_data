@@ -3,8 +3,7 @@
 ### 🔍 Quick Facts (Brooklyn Focus)
 
 * **Total Schools in Brooklyn:** `121`
-* **Schools in Brooklyn Offering Grade 9 Entry:** `98`
-* **Total Schools Offering Grade 9 Entry:** `351`
+* **Schools in Brooklyn Offering Grade 9 Entry:** `121`
 
 ## 📊 Schools by Borough
 
