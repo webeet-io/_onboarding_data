@@ -39,3 +39,7 @@ This report summarizes insights from a real-world dataset of school incidents, a
 
 - 📄 [Download the cleaned dataset (CSV)](https://drive.google.com/file/d/1tQc2wlfAVOJmsDk-MIjroRWiMi1a1l5V/view?usp=drive_link)  
 - 💻 [View the Google Colab notebook](https://colab.research.google.com/drive/147E1ZNGycLHzmd5x7TWxcqwkXquYh81L?usp=sharing)
+
+---
+
+*Prepared as part of a GitHub and data exploration onboarding task.*
