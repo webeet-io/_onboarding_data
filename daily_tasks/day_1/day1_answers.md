@@ -1,8 +1,7 @@
 ## Day 1 – School Incident Analysis
 
+https://docs.google.com/spreadsheets/d/1UpamnWI4I3P8mNwxpQj58bP1PGkoxIIj8K-3xwrKHrY/edit?usp=sharing    
 https://colab.research.google.com/drive/1eS2xxOphrVDViwJf3h8taTuFtvygKmHM?usp=sharing
-https://docs.google.com/spreadsheets/d/1UpamnWI4I3P8mNwxpQj58bP1PGkoxIIj8K-3xwrKHrY/edit?usp=sharing
-    
 
 ### Answers:
 - Total rows: 6310
@@ -74,19 +73,9 @@ dtype: float64
 Most frequent incident type: 'nocrim_n' with 11772.0 incidents.
 
   
-- Bronx incident %: ??????% of all incidents occurred in the Bronx.
+- Bronx incident %: 28,26% of all incidents occurred in the Bronx.
+According to my calculation in GSheets: total incidents - 28151; in Bronx - 7965, which is 28,2%
 
-To estimate the percentage of incidents occurring in the Bronx, I create a new column - total_inc_n, which is counted all incidents from the 5 columns with numbers of crimes by types.
-Then we build apivot table and count total numbers of incidents by each borough.
-As soon as we exclude the N column - which is not part of the official NYC DOE borough codes. What’s more, 'N' shows the highest number of incidents — 16,651, more than any valid borough.
-As I know some schools belong to special citywide programs such as:
-•	District 75: Special education for students with severe disabilities
-•	District 79: Alternative education (e.g., evening schools, adult programs)
-These often use DBNs like 75X###, 79N###, etc.
-It’s possible that 'N' appears when the DBN reflects non-geographic or program-wide schools, or if the format was inconsistent (e.g., N123456) — and extracting str[2] results in 'n'.
-So, I assume that a 16.1% is an incidents happened in Bronx.
-
-  
 
 ### Observations:
 
