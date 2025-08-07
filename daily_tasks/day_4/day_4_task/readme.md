@@ -13,7 +13,8 @@ graph TD
 ## 🏫 Overview
 This project cleans and prepares NYC school SAT results data for analysis. The dataset contains information about SAT test participation and scores across various schools in New York City.
 
-![Data Distribution](https://via.placeholder.com/600x200?text=SAT+Scores+Distribution+Visualization) *(example visualization placeholder)*
+<img width="1177" height="784" alt="image" src="https://github.com/user-attachments/assets/591c9c90-c914-4365-8d5d-ad34e1c68036" />
+
 
 ## 🧹 Data Cleaning Process
 
@@ -133,5 +134,6 @@ graph LR
 
 ## 📜 License
 MIT License - Free for educational and research purposes
+
 
 ---
