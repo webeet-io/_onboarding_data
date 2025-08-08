@@ -1,9 +1,10 @@
 6310
 1890
 NON -CRIM
-bronx_pct = (
-    borough_summary.loc['BRONX', 'total_incidents'] /
-    borough_summary['total_incidents'].sum()
-) * 100
+Bronx percentage 28.24%
+https://docs.google.com/spreadsheets/d/19MnrRLIJU-btyeli3mnyPJsoCv3ygqEEr1dHO9l_xnk/edit?usp=sharing
+    
+    
 
-print(f"📍 Bronx Incident Percentage: {bronx_pct:.2f}%")
+
+
