@@ -16,8 +16,8 @@ private_key = os.environ["DATAGREMLIN_APP_KEY"].replace("\\n", "\n").strip()
 # Step 1: Generate JWT for GitHub App
 now = int(time.time())
 payload = {
-    "iat": now - 60,  # issued 1 min earlier to allow for clock drift
-    "exp": now + (10 * 60),  # expires in 10 minutes
+    "iat": now - 60,
+    "exp": now + (10 * 60),
     "iss": app_id
 }
 jwt_token = jwt.encode(payload, private_key, algorithm="RS256")
@@ -63,7 +63,6 @@ base_branch = pr['base']['ref']
 branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-4])$', branch_name)
 
 if not branch_match:
-    # Logic for when the branch name is incorrect
     print("❌ Branch name invalid")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comments_resp = requests.get(comments_url, headers=auth_headers)
@@ -74,7 +73,6 @@ if not branch_match:
     app_info_resp.raise_for_status()
     bot_username = app_info_resp.json()['slug']
     already_commented = any(c['user']['login'] == bot_username for c in comments)
-
     if not already_commented:
         comment_body = (
             f"❌ You're trying to merge from the wrong branch name: `{branch_name}`.\n"
@@ -94,7 +92,6 @@ print("✅ Branch name is valid")
 print(f"PR is trying to merge into: {base_branch}")
 
 if base_branch != expected_base:
-    # Logic for when the base branch is incorrect
     print(f"❌ PR must be targeted to `{expected_base}`, not `{base_branch}`")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = (
@@ -104,7 +101,6 @@ if base_branch != expected_base:
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     exit(1)
 
-# If we get here, both branch and base are correct
 print("✅ PR base branch is correct")
 
 # Step 7: Fetch PR files and run checks
