@@ -14,16 +14,20 @@ def check_day_files(day_number, auth_headers, pr_files):
             errors.append(f"Day 1 requires `{expected_file_path}` in the PR.")
             return errors
         
-        # Fetch the content using the file's raw_url with the correct headers
+        # We'll use the URL from the file object, which is reliable
+        raw_url = target_file['raw_url']
+
         try:
-            content_resp = requests.get(target_file['raw_url'], headers=auth_headers)
+            # The API call to fetch the raw content
+            content_resp = requests.get(raw_url, headers=auth_headers)
             content_resp.raise_for_status()
             file_content = content_resp.text
         except requests.exceptions.RequestException as e:
+            # If the request fails for any reason, report the error.
             errors.append(f"Could not fetch content for `{expected_file_path}`: {e}")
             return errors
         
-        # Now, perform content checks on the fetched file_content
+        # Perform content checks on the fetched file_content
         sheet_link_pattern = r"https?://docs\.google\.com/spreadsheets/.+"
         if not re.search(sheet_link_pattern, file_content):
             errors.append("Day 1 file must contain a valid Google Sheet link.")
