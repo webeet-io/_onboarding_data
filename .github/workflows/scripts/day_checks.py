@@ -1,7 +1,8 @@
+# In day_checks.py
 import re
 import requests
 
-def check_day_files(day_number, auth_headers, pr_files):
+def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
     errors = []
     
     if day_number == 1:
@@ -14,9 +15,10 @@ def check_day_files(day_number, auth_headers, pr_files):
             errors.append(f"Day 1 requires `{expected_file_path}` in the PR.")
             return errors
         
-        # We'll use the URL from the file object, which is reliable
-        raw_url = target_file['raw_url']
-
+        # Construct a reliable URL using the head commit SHA
+        raw_url = f"https://raw.githubusercontent.com/{repo}/{pr_head_sha}/{target_file['filename']}"
+        print(f"Attempting to fetch file content from URL: {raw_url}")
+        
         try:
             # The API call to fetch the raw content
             content_resp = requests.get(raw_url, headers=auth_headers)
@@ -42,9 +44,5 @@ def check_day_files(day_number, auth_headers, pr_files):
         for pattern in required_answers:
             if not re.search(pattern, file_content, re.IGNORECASE):
                 errors.append(f"Day 1 answer missing or incorrect format: `{pattern}`")
-    
-    # Add logic for other days here
-    elif day_number == 2:
-        pass
     
     return errors
