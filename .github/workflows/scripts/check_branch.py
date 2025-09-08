@@ -10,7 +10,8 @@ pr_number = os.environ['PR_NUMBER']
 
 # GitHub App secrets (must exist in Repo B)
 app_id = os.environ['DATAGREMLIN_APP_ID']
-private_key = os.environ['DATAGREMLIN_APP_KEY'].replace("\\n", "\n")  # handle multiline
+private_key = os.environ["DATAGREMLIN_APP_KEY"].replace("\\n", "\n").strip()
+jwt_token = jwt.encode(payload, private_key, algorithm="RS256")
 
 # Step 1: Generate JWT for GitHub App
 now = int(time.time())
