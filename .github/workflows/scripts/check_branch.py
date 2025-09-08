@@ -70,7 +70,9 @@ branch_name = pr['head']['ref']
 print(f"Checking PR branch: {branch_name}")
 
 # Step 5: Regex check for firstname-lastname-day[1-4]
-if not re.match(r'^[a-z]+-[a-z]+-day[1-4]$', branch_name):
+branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-4])$', branch_name)
+
+if not branch_match:
     print("❌ Branch name invalid")
 
     # Check if bot already commented
@@ -80,7 +82,6 @@ if not re.match(r'^[a-z]+-[a-z]+-day[1-4]$', branch_name):
     comments = comments_resp.json()
 
     # Get the app's username using the JWT token
-    # The '/app' endpoint requires JWT authentication.
     app_info_url = "https://api.github.com/app"
     app_info_resp = requests.get(app_info_url, headers=headers)
     app_info_resp.raise_for_status()
@@ -99,14 +100,14 @@ if not re.match(r'^[a-z]+-[a-z]+-day[1-4]$', branch_name):
 
     exit(1)  # FAIL the workflow
 
+# At this point branch_match is valid
+expected_base = branch_match.group(1)
+day_number = int(branch_match.group(2))
 print("✅ Branch name is valid")
 
 # Step 6: Validate PR base branch
 base_branch = pr['base']['ref']
 print(f"PR is trying to merge into: {base_branch}")
-
-expected_base = branch_match.group(1)
-day_number = int(branch_match.group(2))
 
 if base_branch != expected_base:
     print(f"❌ PR must be against `{expected_base}`, not `{base_branch}`")
@@ -119,13 +120,4 @@ if base_branch != expected_base:
     exit(1)
 
 print("✅ PR base branch is correct")
-
-# Step 7: Fetch PR files (for future day-specific checks)
-files_url = pr['url'] + "/files"
-files_resp = requests.get(files_url, headers=auth_headers)
-files_resp.raise_for_status()
-pr_files = files_resp.json()
-
-file_names = [f['filename'] for f in pr_files]
-print(f"Files in this PR: {file_names}")
 
