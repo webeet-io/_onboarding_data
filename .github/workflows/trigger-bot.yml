@@ -1,0 +1,17 @@
+name: Trigger Bot Repo Workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  trigger-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger centralized workflow
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PAT_REPO_A }}  # PAT for Repo A
+          repository: your-org/repo-a       # Repo A
+          event-type: check-pr
+          client-payload: '{"repo": "${{ github.repository }}", "pr_number": ${{ github.event.pull_request.number }}}'
