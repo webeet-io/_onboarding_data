@@ -13,7 +13,7 @@ app_id = os.environ['DATAGREMLIN_APP_ID']
 private_key = os.environ["DATAGREMLIN_APP_KEY"].replace("\\n", "\n").strip()
 
 # Step 1: Generate JWT for GitHub App
-# The JWT is a temporary token used for authentication as the app itself.
+# The JWT is a temporary token for authenticating as the app itself.
 # It grants permission to request an installation token.
 now = int(time.time())
 payload = {
@@ -24,9 +24,8 @@ payload = {
 jwt_token = jwt.encode(payload, private_key, algorithm="RS256")
 
 # Step 2: Get installation ID for the target repo
-# This is the corrected and more efficient method.
-# We use the GitHub API endpoint specifically for finding a repo's installation ID.
-# This endpoint requires the JWT token for authentication.
+# This is the correct method to find the installation ID for a specific repository.
+# It uses the JWT to authenticate to a dedicated app endpoint.
 headers = {
     "Authorization": f"Bearer {jwt_token}",
     "Accept": "application/vnd.github+json"
@@ -36,19 +35,16 @@ installation_url = f"https://api.github.com/repos/{repo}/installation"
 installation_id = None
 try:
     installation_response = requests.get(installation_url, headers=headers)
-    
-    # Check if the request was successful. A 404 response means the app isn't
-    # installed on this repository. Other errors indicate a problem with the JWT.
+
     if installation_response.status_code == 404:
         raise Exception(f"No installation found for repo {repo}")
-    
+
     installation_response.raise_for_status() # Raises an exception for other HTTP errors (e.g., 401, 500)
-    
+
     installation_data = installation_response.json()
     installation_id = installation_data['id']
-    
+
 except requests.exceptions.RequestException as e:
-    # Catch any request-related errors, like network issues or bad status codes
     raise Exception(f"Failed to retrieve installation ID: {e}")
 
 # Step 3: Generate installation token
@@ -83,12 +79,13 @@ if not re.match(r'^[a-z]+-[a-z]+-day[1-4]$', branch_name):
     comments_resp.raise_for_status()
     comments = comments_resp.json()
 
-    # Get the app's username to check for existing comments
-    app_user_url = "https://api.github.com/user/installations"
-    app_user_resp = requests.get(app_user_url, headers=headers)
-    app_user_resp.raise_for_status()
-    bot_username = app_user_resp.json()[0]['app_slug']
-    
+    # Get the app's username using the installation token
+    # The 'app' endpoint requires authentication with a valid app installation token.
+    app_info_url = "https://api.github.com/app"
+    app_info_resp = requests.get(app_info_url, headers=auth_headers)
+    app_info_resp.raise_for_status()
+    bot_username = app_info_resp.json()['slug']
+
     already_commented = any(c['user']['login'] == bot_username for c in comments)
 
     if not already_commented:
