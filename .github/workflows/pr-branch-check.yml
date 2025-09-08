@@ -1,0 +1,26 @@
+name: PR Branch Checker
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  check-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Run branch check
+        env:
+          TARGET_REPO: ${{ github.repository }}        # Repo B
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          DATAGREMLIN_APP_KEY: ${{ secrets.DATAGREMLIN_APP_KEY }}
+          DATAGREMLIN_APP_ID: ${{ secrets.DATAGREMLIN_APP_ID }}
+        run: python scripts/check_branch.py
