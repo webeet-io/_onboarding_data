@@ -100,3 +100,32 @@ if not re.match(r'^[a-z]+-[a-z]+-day[1-4]$', branch_name):
     exit(1)  # FAIL the workflow
 
 print("✅ Branch name is valid")
+
+# Step 6: Validate PR base branch
+base_branch = pr['base']['ref']
+print(f"PR is trying to merge into: {base_branch}")
+
+expected_base = branch_match.group(1)
+day_number = int(branch_match.group(2))
+
+if base_branch != expected_base:
+    print(f"❌ PR must be against `{expected_base}`, not `{base_branch}`")
+    comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
+    comment_body = (
+        f"❌ Pull request must be targeted to `{expected_base}`, not `{base_branch}`.\n"
+        f"Please change the base branch."
+    )
+    requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
+    exit(1)
+
+print("✅ PR base branch is correct")
+
+# Step 7: Fetch PR files (for future day-specific checks)
+files_url = pr['url'] + "/files"
+files_resp = requests.get(files_url, headers=auth_headers)
+files_resp.raise_for_status()
+pr_files = files_resp.json()
+
+file_names = [f['filename'] for f in pr_files]
+print(f"Files in this PR: {file_names}")
+
