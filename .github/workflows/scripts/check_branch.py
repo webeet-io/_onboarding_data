@@ -120,4 +120,20 @@ if base_branch != expected_base:
     exit(1)
 
 print("✅ PR base branch is correct")
+# Step 7: Fetch PR files
+files_url = pr['url'] + "/files"
+files_resp = requests.get(files_url, headers=auth_headers)
+files_resp.raise_for_status()
+pr_files = files_resp.json()
+file_names = [f['filename'] for f in pr_files]
+print(f"Files in this PR: {file_names}")
 
+# Step 8: Run day-specific checks from day_checks.py
+day_errors = check_day_files(day_number, file_names)
+if day_errors:
+    comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
+    comment_body = "❌ Day-specific file checks failed:\n" + "\n".join(day_errors)
+    requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
+    exit(1)
+else:
+    print(f"✅ All day {day_number} files are correct")
