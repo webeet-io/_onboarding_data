@@ -79,10 +79,10 @@ if not re.match(r'^[a-z]+-[a-z]+-day[1-4]$', branch_name):
     comments_resp.raise_for_status()
     comments = comments_resp.json()
 
-    # Get the app's username using the installation token
-    # The 'app' endpoint requires authentication with a valid app installation token.
+    # Get the app's username using the JWT token
+    # The '/app' endpoint requires JWT authentication.
     app_info_url = "https://api.github.com/app"
-    app_info_resp = requests.get(app_info_url, headers=auth_headers)
+    app_info_resp = requests.get(app_info_url, headers=headers)
     app_info_resp.raise_for_status()
     bot_username = app_info_resp.json()['slug']
 
