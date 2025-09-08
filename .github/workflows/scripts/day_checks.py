@@ -14,6 +14,7 @@ def check_day_files(day_number, auth_headers, pr_files):
             return errors
         
         raw_url = target_file['raw_url']
+        print("Raw url: `{raw_url}`")
         try:
             content_resp = requests.get(raw_url, headers=auth_headers)
             content_resp.raise_for_status()
