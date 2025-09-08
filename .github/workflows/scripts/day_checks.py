@@ -20,6 +20,7 @@ def check_day_files(day_number, auth_headers, pr_files):
             content_resp.raise_for_status()
             file_content = content_resp.text
         except requests.exceptions.RequestException as e:
+            errors.append(raw_url)
             errors.append(f"Could not fetch content for `{expected_file_path}`: {e}")
             return errors
         
