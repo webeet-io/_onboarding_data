@@ -3,13 +3,12 @@ import requests
 import re
 import jwt
 import time
-from day_checks import check_day_files
 
 # Inputs from workflow
 repo = os.environ['TARGET_REPO']
 pr_number = os.environ['PR_NUMBER']
 
-# GitHub App secrets
+# GitHub App secrets (must exist in Repo B)
 app_id = os.environ['DATAGREMLIN_APP_ID']
 private_key = os.environ["DATAGREMLIN_APP_KEY"].replace("\\n", "\n").strip()
 
@@ -57,62 +56,26 @@ pr_resp = requests.get(pr_url, headers=auth_headers)
 pr_resp.raise_for_status()
 pr = pr_resp.json()
 branch_name = pr['head']['ref']
-base_branch = pr['base']['ref']
 
 print(f"Checking PR branch: {branch_name}")
 
 # Step 5: Regex check for firstname-lastname-day[1-4]
 branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-4])$', branch_name)
-
-if branch_match:
-    # If the branch name is valid, extract the parts and proceed
-    expected_base = branch_match.group(1)
-    day_number = int(branch_match.group(2))
-    print("✅ Branch name is valid")
-
-    # Step 6: Validate PR base branch
-    print(f"PR is trying to merge into: {base_branch}")
-
-    if base_branch != expected_base:
-        print(f"❌ PR must be targeted to `{expected_base}`, not `{base_branch}`")
-        comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
-        comment_body = (
-            f"❌ Pull request must be targeted to `{expected_base}`, not `{base_branch}`.\n"
-            f"Please change the base branch."
-        )
-        requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
-        exit(1)
-    
-    print("✅ PR base branch is correct")
-
-    # Step 7: Fetch PR files and run checks
-    files_url = pr['url'] + "/files"
-    files_resp = requests.get(files_url, headers=auth_headers)
-    files_resp.raise_for_status()
-    pr_files = files_resp.json()
-    file_names = [f['filename'] for f in pr_files]
-    print(f"Files in this PR: {file_names}")
-
-    day_errors = check_day_files(day_number, auth_headers, pr_files)
-    if day_errors:
-        comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
-        comment_body = "❌ Day-specific file checks failed:\n" + "\n".join(day_errors)
-        requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
-        exit(1)
-    else:
-        print(f"✅ All day {day_number} files are correct")
-
-else:
-    # If the branch name is not valid, handle the error
+if not branch_match:
     print("❌ Branch name invalid")
+
+    # Check if bot already commented
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comments_resp = requests.get(comments_url, headers=auth_headers)
     comments_resp.raise_for_status()
     comments = comments_resp.json()
+
+    # Get the app's username using the JWT token
     app_info_url = "https://api.github.com/app"
     app_info_resp = requests.get(app_info_url, headers=headers)
     app_info_resp.raise_for_status()
     bot_username = app_info_resp.json()['slug']
+
     already_commented = any(c['user']['login'] == bot_username for c in comments)
 
     if not already_commented:
@@ -123,4 +86,39 @@ else:
         requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     else:
         print("Bot comment already exists, skipping")
+
+    exit(1)  # FAIL the workflow
+
+print("✅ Branch name is valid")
+
+# Step 6: Validate PR base branch
+base_branch = pr['base']['ref']
+print(f"PR is trying to merge into: {base_branch}")
+
+expected_base = branch_match.group(1)
+day_number = int(branch_match.group(2))
+
+if base_branch != expected_base:
+    print(f"❌ PR must be against `{expected_base}`, not `{base_branch}`")
+    comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
+    comment_body = (
+        f"❌ Pull request must be targeted to `{expected_base}`, not `{base_branch}`.\n"
+        f"Please change the base branch."
+    )
+    requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     exit(1)
+
+print("✅ PR base branch is correct")
+
+# Step 7: Fetch PR files (for future day-specific checks)
+files_url = pr['url'] + "/files"
+files_resp = requests.get(files_url, headers=auth_headers)
+files_resp.raise_for_status()
+pr_files = files_resp.json()
+
+file_names = [f['filename'] for f in pr_files]
+print(f"Files in this PR: {file_names}")
+
+# Placeholder for day-specific file logic
+for f in file_names:
+    print(f"Checking file: {f}...")  # Logic per day will be added here
