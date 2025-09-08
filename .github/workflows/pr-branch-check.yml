@@ -1,40 +1,43 @@
-name: PR Branch Checker
+name: Check PR Branch
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, synchronize, reopened]
 
 jobs:
   check-pr:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
-      # Step 1: Checkout repo
-      - name: Checkout repo
+      # Step 1: Checkout the code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       # Step 2: Setup Python
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: '3.x'
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies from requirements.txt
       - name: Install Python dependencies
-        run: python -m pip install --upgrade pip requests PyJWT
-
-      # Step 4: Verify installed packages
-      - name: Verify installed packages
         run: |
-          python -m pip list
-          python -c "import requests; print('requests installed')"
-          python -c "import jwt; print('PyJWT installed')"
+          python -m pip install --upgrade pip
+          if [ -f "requirements.txt" ]; then
+            python -m pip install -r requirements.txt
+          else
+            echo "No requirements.txt found, skipping."
+          fi
 
-      # Step 5: Run branch check script
+      # Step 4: Verify installation (optional)
+      - name: Verify installed packages
+        run: python -m pip list
+
+      # Step 5: Run your branch check script
       - name: Run branch check
+        run: python .github/workflows/scripts/check_branch.py
         env:
           TARGET_REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           DATAGREMLIN_APP_KEY: ${{ secrets.DATAGREMLIN_APP_KEY }}
           DATAGREMLIN_APP_ID: ${{ secrets.DATAGREMLIN_APP_ID }}
-        run: python .github/workflows/scripts/check_branch.py
