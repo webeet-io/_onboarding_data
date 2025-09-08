@@ -1,4 +1,4 @@
-name: Trigger Bot Repo Workflow
+name: Trigger Centralized Bot Workflow
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ jobs:
       - name: Trigger centralized workflow
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.PAT_REPO_A }}  # PAT for Repo A
-          repository: your-org/repo-a       # Repo A
+          token: ${{ secrets.PAT_REPO_A }}           # PAT from Repo B with access to Repo A
+          repository: webeet-io/.github             # Repo A where workflow lives
           event-type: check-pr
           client-payload: '{"repo": "${{ github.repository }}", "pr_number": ${{ github.event.pull_request.number }}}'
