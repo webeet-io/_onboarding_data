@@ -94,7 +94,7 @@ print("✅ Branch name is valid")
 # Step 6: Validate PR base branch
 base_branch = pr['base']['ref']
 print(f"PR is trying to merge into: {base_branch}")
-
+print(f"branch_match: {branch_match}")
 expected_base = branch_match.group(1)
 day_number = int(branch_match.group(2))
 
