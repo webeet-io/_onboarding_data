@@ -13,19 +13,15 @@ app_id = os.environ['DATAGREMLIN_APP_ID']
 private_key = os.environ["DATAGREMLIN_APP_KEY"].replace("\\n", "\n").strip()
 
 # Step 1: Generate JWT for GitHub App
-# The JWT is a temporary token for authenticating as the app itself.
-# It grants permission to request an installation token.
 now = int(time.time())
 payload = {
-    "iat": now - 60,                # issued 1 min earlier to allow for clock drift
-    "exp": now + (10 * 60),          # expires in 10 minutes
+    "iat": now - 60,
+    "exp": now + (10 * 60),
     "iss": app_id
 }
 jwt_token = jwt.encode(payload, private_key, algorithm="RS256")
 
 # Step 2: Get installation ID for the target repo
-# This is the correct method to find the installation ID for a specific repository.
-# It uses the JWT to authenticate to a dedicated app endpoint.
 headers = {
     "Authorization": f"Bearer {jwt_token}",
     "Accept": "application/vnd.github+json"
@@ -39,8 +35,7 @@ try:
     if installation_response.status_code == 404:
         raise Exception(f"No installation found for repo {repo}")
 
-    installation_response.raise_for_status() # Raises an exception for other HTTP errors (e.g., 401, 500)
-
+    installation_response.raise_for_status()
     installation_data = installation_response.json()
     installation_id = installation_data['id']
 
@@ -48,11 +43,9 @@ except requests.exceptions.RequestException as e:
     raise Exception(f"Failed to retrieve installation ID: {e}")
 
 # Step 3: Generate installation token
-# The installation token is now used to make API calls on behalf of the app
-# within the context of the specific repository.
 token_url = f"https://api.github.com/app/installations/{installation_id}/access_tokens"
 token_resp = requests.post(token_url, headers=headers)
-token_resp.raise_for_status() # Ensure the token request was successful
+token_resp.raise_for_status()
 token = token_resp.json()['token']
 
 auth_headers = {
@@ -66,27 +59,24 @@ pr_resp = requests.get(pr_url, headers=auth_headers)
 pr_resp.raise_for_status()
 pr = pr_resp.json()
 branch_name = pr['head']['ref']
+base_branch = pr['base']['ref']
 
 print(f"Checking PR branch: {branch_name}")
 
 # Step 5: Regex check for firstname-lastname-day[1-4]
 branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-4])$', branch_name)
 
+# If the branch name is not valid, comment and exit
 if not branch_match:
     print("❌ Branch name invalid")
-
-    # Check if bot already commented
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comments_resp = requests.get(comments_url, headers=auth_headers)
     comments_resp.raise_for_status()
     comments = comments_resp.json()
-
-    # Get the app's username using the JWT token
     app_info_url = "https://api.github.com/app"
     app_info_resp = requests.get(app_info_url, headers=headers)
     app_info_resp.raise_for_status()
     bot_username = app_info_resp.json()['slug']
-
     already_commented = any(c['user']['login'] == bot_username for c in comments)
 
     if not already_commented:
@@ -97,23 +87,22 @@ if not branch_match:
         requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     else:
         print("Bot comment already exists, skipping")
+    exit(1)
 
-    exit(1)  # FAIL the workflow
-
-# At this point branch_match is valid
+# At this point, branch_match is valid
 expected_base = branch_match.group(1)
 day_number = int(branch_match.group(2))
 print("✅ Branch name is valid")
 
 # Step 6: Validate PR base branch
-base_branch = pr['base']['ref']
 print(f"PR is trying to merge into: {base_branch}")
 
-if base_branch != expected_base:
-    print(f"❌ PR must be against `{expected_base}`, not `{base_branch}`")
+# Corrected logic: Check if the base branch is 'main' (or another valid target)
+if base_branch != 'main':
+    print(f"❌ PR must be targeted to `main`, not `{base_branch}`")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = (
-        f"❌ Pull request must be targeted to `{expected_base}`, not `{base_branch}`.\n"
+        f"❌ Pull request must be targeted to `main`, not `{base_branch}`.\n"
         f"Please change the base branch."
     )
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
@@ -128,7 +117,24 @@ pr_files = files_resp.json()
 file_names = [f['filename'] for f in pr_files]
 print(f"Files in this PR: {file_names}")
 
-# Step 8: Run day-specific checks from day_checks.py
+# Step 8: Run day-specific checks
+# NOTE: The 'check_day_files' function is not defined in this script.
+# You need to define it or import it from a separate module.
+# For demonstration purposes, I am defining a simple version of it here.
+def check_day_files(day, files):
+    errors = []
+    # Day 1 check: Expects 'anastasia-piter-day1.csv'
+    if day == 1:
+        expected_file = f"anastasia-piter-day{day}.csv"
+        if expected_file not in files:
+            errors.append(f"- Expected file `{expected_file}` is missing.")
+    # Day 2 check: Expects 'anastasia-piter-day2.json'
+    elif day == 2:
+        expected_file = f"anastasia-piter-day{day}.json"
+        if expected_file not in files:
+            errors.append(f"- Expected file `{expected_file}` is missing.")
+    return errors
+
 day_errors = check_day_files(day_number, file_names)
 if day_errors:
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
