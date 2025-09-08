@@ -3,20 +3,22 @@ import requests
 import re
 import jwt
 import time
+# Import the function from the day_checks.py file in the same directory
+from day_checks import check_day_files
 
 # Inputs from workflow
 repo = os.environ['TARGET_REPO']
 pr_number = os.environ['PR_NUMBER']
 
-# GitHub App secrets (must exist in Repo B)
+# GitHub App secrets
 app_id = os.environ['DATAGREMLIN_APP_ID']
 private_key = os.environ["DATAGREMLIN_APP_KEY"].replace("\\n", "\n").strip()
 
 # Step 1: Generate JWT for GitHub App
 now = int(time.time())
 payload = {
-    "iat": now - 60,
-    "exp": now + (10 * 60),
+    "iat": now - 60,  # issued 1 min earlier to allow for clock drift
+    "exp": now + (10 * 60),  # expires in 10 minutes
     "iss": app_id
 }
 jwt_token = jwt.encode(payload, private_key, algorithm="RS256")
@@ -31,14 +33,11 @@ installation_url = f"https://api.github.com/repos/{repo}/installation"
 installation_id = None
 try:
     installation_response = requests.get(installation_url, headers=headers)
-
     if installation_response.status_code == 404:
         raise Exception(f"No installation found for repo {repo}")
-
     installation_response.raise_for_status()
     installation_data = installation_response.json()
     installation_id = installation_data['id']
-
 except requests.exceptions.RequestException as e:
     raise Exception(f"Failed to retrieve installation ID: {e}")
 
@@ -66,7 +65,6 @@ print(f"Checking PR branch: {branch_name}")
 # Step 5: Regex check for firstname-lastname-day[1-4]
 branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-4])$', branch_name)
 
-# If the branch name is not valid, comment and exit
 if not branch_match:
     print("❌ Branch name invalid")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
@@ -97,18 +95,19 @@ print("✅ Branch name is valid")
 # Step 6: Validate PR base branch
 print(f"PR is trying to merge into: {base_branch}")
 
-# Corrected logic: Check if the base branch is 'main' (or another valid target)
-if base_branch != 'main':
-    print(f"❌ PR must be targeted to `main`, not `{base_branch}`")
+# The PR should merge into the expected_base branch (e.g., 'anastasia-piter')
+if base_branch != expected_base:
+    print(f"❌ PR must be targeted to `{expected_base}`, not `{base_branch}`")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = (
-        f"❌ Pull request must be targeted to `main`, not `{base_branch}`.\n"
+        f"❌ Pull request must be targeted to `{expected_base}`, not `{base_branch}`.\n"
         f"Please change the base branch."
     )
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     exit(1)
 
 print("✅ PR base branch is correct")
+
 # Step 7: Fetch PR files
 files_url = pr['url'] + "/files"
 files_resp = requests.get(files_url, headers=auth_headers)
@@ -117,25 +116,8 @@ pr_files = files_resp.json()
 file_names = [f['filename'] for f in pr_files]
 print(f"Files in this PR: {file_names}")
 
-# Step 8: Run day-specific checks
-# NOTE: The 'check_day_files' function is not defined in this script.
-# You need to define it or import it from a separate module.
-# For demonstration purposes, I am defining a simple version of it here.
-def check_day_files(day, files):
-    errors = []
-    # Day 1 check: Expects 'anastasia-piter-day1.csv'
-    if day == 1:
-        expected_file = f"anastasia-piter-day{day}.csv"
-        if expected_file not in files:
-            errors.append(f"- Expected file `{expected_file}` is missing.")
-    # Day 2 check: Expects 'anastasia-piter-day2.json'
-    elif day == 2:
-        expected_file = f"anastasia-piter-day{day}.json"
-        if expected_file not in files:
-            errors.append(f"- Expected file `{expected_file}` is missing.")
-    return errors
-
-day_errors = check_day_files(day_number, file_names)
+# Step 8: Run day-specific checks from day_checks.py
+day_errors = check_day_files(day_number, auth_headers, pr_files)
 if day_errors:
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = "❌ Day-specific file checks failed:\n" + "\n".join(day_errors)
