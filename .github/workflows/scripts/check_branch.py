@@ -119,6 +119,38 @@ pr_files = files_resp.json()
 file_names = [f['filename'] for f in pr_files]
 print(f"Files in this PR: {file_names}")
 
-# Placeholder for day-specific file logic
-for f in file_names:
-    print(f"Checking file: {f}...")  # Logic per day will be added here
+# -------------------------
+# Step 8: Day-specific file checks
+# -------------------------
+from daily_checks import check_day_files  # import your daily logic function
+
+day_errors = check_day_files(day_number, auth_headers, pr_files)
+
+if day_errors:
+    print("❌ Day-specific file validation failed:")
+    for err in day_errors:
+        print(f"- {err}")
+
+    # Post a single comment with all errors, if not already commented
+    comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
+    comments_resp = requests.get(comments_url, headers=auth_headers)
+    comments_resp.raise_for_status()
+    comments = comments_resp.json()
+
+    # Get the app's username using the JWT token
+    app_info_url = "https://api.github.com/app"
+    app_info_resp = requests.get(app_info_url, headers=headers)
+    app_info_resp.raise_for_status()
+    bot_username = app_info_resp.json()['slug']
+
+    already_commented = any(c['user']['login'] == bot_username for c in comments)
+
+    if not already_commented:
+        comment_body = "❌ Day-specific validation errors:\n" + "\n".join(f"- {e}" for e in day_errors)
+        requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
+    else:
+        print("Bot comment already exists, skipping")
+
+    exit(1)  # FAIL the workflow
+
+print("✅ Day-specific file validation passed")
