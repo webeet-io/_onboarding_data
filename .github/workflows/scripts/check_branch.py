@@ -115,7 +115,11 @@ pr_files = files_resp.json()
 file_names = [f['filename'] for f in pr_files]
 print(f"Files in this PR: {file_names}")
 
-day_errors = check_day_files(day_number, auth_headers, pr_files)
+# Get the PR's head commit SHA to ensure we fetch from the correct branch state
+pr_head_sha = pr['head']['sha']
+
+# Step 8: Run day-specific checks
+day_errors = check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha)
 if day_errors:
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = "❌ Day-specific file checks failed:\n" + "\n".join(day_errors)
