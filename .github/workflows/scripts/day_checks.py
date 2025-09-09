@@ -1,4 +1,3 @@
-# day_checks.py
 import requests
 import re
 import base64
@@ -14,15 +13,19 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             errors.append(f"Day 1 requires `{expected_file_path}` in the PR.")
             return errors
         
-        # This is the fix: use the raw.githubusercontent.com domain with a token.
+        # This is the fix: construct the raw URL using the API response token.
         # This URL is more reliable for direct file access from a PR.
-        # We also need to change the header to be a standard 'Authorization' header.
         raw_url = f"https://raw.githubusercontent.com/{repo}/{pr_head_sha}/{target_file['filename']}"
         
         print(f"[DEBUG] Fetching content from URL: {raw_url}")
 
         try:
-            content_resp = requests.get(raw_url, headers=auth_headers)
+            # We're using a different authentication method for the raw domain.
+            # This is why the code was failing before.
+            raw_headers = {
+                "Accept": "application/vnd.github.v3.raw"
+            }
+            content_resp = requests.get(raw_url, headers=raw_headers, auth=(auth_headers.get('Authorization').split(' ')[1], 'x-oauth-basic'))
             content_resp.raise_for_status()
             file_content = content_resp.text
             
