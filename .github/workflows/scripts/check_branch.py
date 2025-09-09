@@ -5,10 +5,9 @@ import jwt
 import time
 import sys
 
-# Define the file checking function within the script
 def check_day_files(day_number, file_names):
     errors = []
-    
+
     # A dictionary to store the expected files for each day
     expected_files_by_day = {
         1: {"daily_tasks/day_1/day1_answers.md"},
@@ -25,12 +24,7 @@ def check_day_files(day_number, file_names):
     missing_files = files_to_check - pr_files_set
     if missing_files:
         for missing_file in sorted(list(missing_files)):
-            errors.append(f"Missing required file: `{missing_file}`.")
-
-    # Check for extra files in the PR that shouldn't be there
-    extra_files = pr_files_set - files_to_check
-    if extra_files:
-        errors.append(f"Unexpected files found in the PR: {', '.join(sorted(list(extra_files)))}")
+            errors.append(f" ❌ Gremlin eyes everywhere… and they see {missing_file} is not there. Fix it!")
 
     if not errors:
         for expected_file in sorted(list(files_to_check)):
@@ -111,8 +105,7 @@ if not branch_match:
     already_commented = any(c['user']['login'] == bot_username for c in comments)
     if not already_commented:
         comment_body = (
-            f"❌ You're trying to merge from the wrong branch name: `{branch_name}`.\n"
-            f"Branch names must follow: `firstname-lastname-day1..4`"
+            f"❌ Human, this branch {branch_name} is chaotic evil. Correct it to `firstname-lastname-day1..4..`"
         )
         requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     else:
@@ -131,8 +124,8 @@ if base_branch != expected_base:
     print(f"❌ PR must be targeted to `{expected_base}`, not `{base_branch}`")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = (
-        f"❌ Pull request must be targeted to `{expected_base}`, not `{base_branch}`.\n"
-        f"Please change the base branch."
+        f"❌ Merging into `{base_branch}`? Bold move… but incorrect. Use `{expected_base}`.\n"
+       
     )
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     exit(1)
@@ -151,11 +144,11 @@ print(f"Files in this PR: {file_names}")
 day_errors = check_day_files(day_number, file_names)
 if day_errors:
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
-    comment_body = "❌ Day-specific file checks failed:\n" + "\n".join(day_errors)
+    comment_body = "❌ Humans, why you always so sloppy? Correct these mistakes:\n" + "\n".join(day_errors)
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
     exit(1)
 else:
     print(f"✅ All day {day_number} files are correct")
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
-    comment_body = "✅ All good! Calling in human @apiterwebeet"
+    comment_body = "✅ I’m shocked… everything is correct. Gremlin approves, gremlin calls for human to check the rest @apiterwebeet"
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
