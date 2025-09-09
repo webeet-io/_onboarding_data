@@ -27,7 +27,7 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
         print(f"✅ Successfully fetched file via Contents API: {expected_file_path}")
 
     except requests.exceptions.RequestException as e:
-        errors.append(f"Could not fetch content for `{expected_file_path}` via Contents API: {e}")
+        errors.append(f"Could not fetch content (looser) for `{expected_file_path}` via Contents API: {e}")
         return errors
     except KeyError:
         errors.append("File content not found in API response. Is the file empty or binary?")
