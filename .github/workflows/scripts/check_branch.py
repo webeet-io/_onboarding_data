@@ -7,38 +7,44 @@ import time
 
 def check_day_files(day_number, file_names):
     errors = []
-
-    # A dictionary to store the expected files for each day
+    
     expected_files_by_day = {
-        1: ["daily_tasks/day_1/day1_answers.md"],
-        2: ["daily_tasks/day_2/day2_analysis.ipynb"],
-        3: ["daily_tasks/day_3/day3_sql_analysis.ipynb"],
-        4: ["daily_tasks/day_4/sat_modeling.ipynb", "daily_tasks/day_4/cleaned_sat_results.csv"],
-        5: []  # No files required for day 5
+        1: {"daily_tasks/day_1/day1_answers.md"},
+        2: {"daily_tasks/day_2/day2_analysis.ipynb"},
+        3: {"daily_tasks/day_3/day3_sql_analysis.ipynb"},
+        4: {"daily_tasks/day_4/sat_modeling.ipynb", "daily_tasks/day_4/cleaned_sat_results.csv"},
+        5: set()  # No files required for day 5
     }
 
-    # Get the list of files to check for the current day
-    files_to_check = expected_files_by_day.get(day_number, [])
-
+    files_to_check = expected_files_by_day.get(day_number, set())
+    
     if day_number == 5:
         print(f"✅ No file checks required for Day {day_number}.")
         return errors
     
+    # Check if there are any files for this day in the dictionary
     if not files_to_check:
-        errors.append(f"Day {day_number} check logic is not defined.")
+        errors.append(f"Day {day_number} check logic is not defined or requires no files.")
         return errors
 
-    # Check if each expected file exists in the PR files
-    for expected_file in files_to_check:
-        if expected_file not in file_names:
-            errors.append(f"Day {day_number} requires `{expected_file}` in the PR.")
-            # If a file is missing, we can stop here and return the errors
-            return errors
-        else:
+    # Check for extra files in the PR that shouldn't be there
+    pr_files_set = set(file_names)
+    extra_files = pr_files_set - files_to_check
+    if extra_files:
+        errors.append(f"Unexpected files found in the PR: {', '.join(sorted(list(extra_files)))}")
+        # We don't return here so we can also check for missing files
+
+    # Check for missing required files
+    missing_files = files_to_check - pr_files_set
+    if missing_files:
+        for missing_file in sorted(list(missing_files)):
+            errors.append(f"Missing required file: `{missing_file}`.")
+
+    if not errors:
+        for expected_file in sorted(list(files_to_check)):
             print(f"✅ Found expected file: {expected_file}")
 
     return errors
-
 
 # Inputs from workflow
 repo = os.environ['TARGET_REPO']
