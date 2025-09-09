@@ -15,7 +15,7 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
 
         file_content = None
 
-        # ✅ OPTION 1: Use GitHub Contents API (works with private repos)
+        # ✅ Always try GitHub Contents API first
         api_url = f"https://api.github.com/repos/{repo}/contents/{target_file['filename']}?ref={pr_head_sha}"
         try:
             content_resp = requests.get(api_url, headers=auth_headers)
@@ -24,9 +24,9 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             file_content = base64.b64decode(file_data['content']).decode('utf-8')
             print(f"✅ Successfully fetched file via Contents API: {expected_file_path}")
         except Exception as e:
-            print(f"⚠️ Contents API failed, falling back to raw URL: {e}")
+            print(f"⚠️ Contents API failed: {e}")
 
-            # ✅ OPTION 2: Fallback for public repos
+            # ✅ Fallback for public repos only
             raw_url = f"https://raw.githubusercontent.com/{repo}/{pr_head_sha}/{target_file['filename']}"
             try:
                 raw_resp = requests.get(raw_url)
@@ -52,9 +52,4 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             if not re.search(pattern, file_content, re.IGNORECASE):
                 errors.append(f"Day 1 answer missing or incorrect format: `{pattern}`")
 
-    # Placeholder for future day checks
-    elif day_number in [2, 3, 4]:
-        pass
-
     return errors
-
