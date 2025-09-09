@@ -90,7 +90,7 @@ base_branch = pr['base']['ref']
 pr_head_sha = pr['head']['sha']
 
 # Step 5: Check branch name and extract info
-branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-4])$', branch_name)
+branch_match = re.match(r'^([a-z]+-[a-z]+)-day([1-5])$', branch_name)
 
 if not branch_match:
     print("❌ Branch name invalid")
