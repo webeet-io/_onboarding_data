@@ -1,7 +1,7 @@
+# day_checks.py
 import requests
 import re
 import base64
-import os
 
 def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
     errors = []
@@ -14,27 +14,25 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             errors.append(f"Day 1 requires `{expected_file_path}` in the PR.")
             return errors
         
-        # This is the fix: use the GitHub Contents API to get the file content
-        api_url = f"https://api.github.com/repos/{repo}/contents/{target_file['filename']}?ref={pr_head_sha}"
+        # This is the fix: use the raw.githubusercontent.com domain with a token.
+        # This URL is more reliable for direct file access from a PR.
+        # We also need to change the header to be a standard 'Authorization' header.
+        raw_url = f"https://raw.githubusercontent.com/{repo}/{pr_head_sha}/{target_file['filename']}"
         
-        print(f"[DEBUG] Fetching content from API URL: {api_url}")
-        
+        print(f"[DEBUG] Fetching content from URL: {raw_url}")
+
         try:
-            content_resp = requests.get(api_url, headers=auth_headers)
+            content_resp = requests.get(raw_url, headers=auth_headers)
             content_resp.raise_for_status()
-            file_data = content_resp.json()
+            file_content = content_resp.text
             
-            # The content is Base64 encoded, so we must decode it.
-            file_content = base64.b64decode(file_data['content']).decode('utf-8')
+            # The raw content is NOT base64 encoded, so we don't need to decode it.
             print(f"✅ Successfully fetched file content for: {expected_file_path}")
 
         except requests.exceptions.RequestException as e:
             errors.append(f"Could not fetch content for `{expected_file_path}`: {e}")
             return errors
-        except KeyError:
-            errors.append("File content not found in API response. Is the file empty or binary?")
-            return errors
-
+        
         # --- Content validation ---
         sheet_link_pattern = r"https?://docs\.google\.com/spreadsheets/\S+"
         if not re.search(sheet_link_pattern, file_content):
