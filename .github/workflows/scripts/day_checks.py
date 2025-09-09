@@ -13,7 +13,7 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             errors.append(f"Day 1 requires `{expected_file_path}` in the PR.")
             return errors
         
-        # OPTION 1: Use GitHub API contents endpoint (recommended)
+        # --- Fetch file content using GitHub API contents endpoint ---
         api_url = f"https://api.github.com/repos/{repo}/contents/{target_file['filename']}?ref={pr_head_sha}"
         try:
             content_resp = requests.get(api_url, headers=auth_headers)
@@ -24,30 +24,21 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             errors.append(f"Could not fetch content for `{expected_file_path}`: {e}")
             return errors
 
-        # OPTION 2: raw.githubusercontent.com (if you prefer)
-        # raw_url = f"https://raw.githubusercontent.com/{repo}/{pr_head_sha}/{target_file['filename']}"
-        # try:
-        #     content_resp = requests.get(raw_url)  # no headers!
-        #     content_resp.raise_for_status()
-        #     file_content = content_resp.text
-        # except requests.exceptions.RequestException as e:
-        #     errors.append(f"Could not fetch content for `{expected_file_path}`: {e}")
-        #     return errors
-        
-        # Perform content checks
-        sheet_link_pattern = r"https?://docs\.google\.com/spreadsheets/.+"
-        if not re.search(sheet_link_pattern, file_content):
+        # --- Step 1: Check for Google Sheets link ---
+        sheet_match = re.search(r"https?://docs\.google\.com/spreadsheets/\S+", file_content)
+        if not sheet_match:
             errors.append("Day 1 file must contain a valid Google Sheet link.")
 
-        required_answers = [
-            r"Total rows:\s*6310",
-            r"Unique schools:\s*(1891|1931)",
-            r"Most frequent incident type:\s*NoCrim\s*11772",
-            r"Bronx incident %:\s*(28\.31%|28\.23%)"
-        ]
-        for pattern in required_answers:
+        # --- Step 2: Validate required answers ---
+        patterns = {
+            "Total rows": r"Total rows:\s*6310",
+            "Unique schools": r"Unique schools:\s*(1891|1931)",
+            "Most frequent incident type": r"Most frequent incident type:\s*NoCrim\s*11772",
+            "Bronx incident %": r"Bronx incident %:\s*(28\.31%|28\.23%)"
+        }
+
+        for label, pattern in patterns.items():
             if not re.search(pattern, file_content, re.IGNORECASE):
-                errors.append(f"Day 1 answer missing or incorrect format: `{pattern}`")
+                errors.append(f"Day 1 answer missing or incorrect format for: {label}")
 
     return errors
-
