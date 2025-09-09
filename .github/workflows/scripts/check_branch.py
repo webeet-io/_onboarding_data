@@ -9,7 +9,6 @@ def check_day_files(day_number, file_names):
     errors = []
 
     # A dictionary to store the expected files for each day
-    # Day 4 requires two files, so its value is a list
     expected_files_by_day = {
         1: ["daily_tasks/day_1/day1_answers.md"],
         2: ["daily_tasks/day_2/day2_analysis.ipynb"],
@@ -33,6 +32,10 @@ def check_day_files(day_number, file_names):
     for expected_file in files_to_check:
         if expected_file not in file_names:
             errors.append(f"Day {day_number} requires `{expected_file}` in the PR.")
+            # If a file is missing, we can stop here and return the errors
+            return errors
+        else:
+            print(f"✅ Found expected file: {expected_file}")
 
     return errors
 
