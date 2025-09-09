@@ -14,21 +14,27 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
             errors.append(f"Day 1 requires `{expected_file_path}` in the PR.")
             return errors
 
-        print(f"[DEBUG] Found target file: {target_file['filename']}")
-
         # Build the GitHub Contents API URL
         api_url = f"https://api.github.com/repos/{repo}/contents/{target_file['filename']}?ref={pr_head_sha}"
-        print(f"[DEBUG] Fetching file content from API URL: {api_url}")
-
+        
+        # We will now use this URL to try and fetch the content.
+        # This is where the error is occurring.
+        
         try:
+            print(f"[DEBUG] Fetching file content from URL: {api_url}")
             content_resp = requests.get(api_url, headers=auth_headers)
             content_resp.raise_for_status()
             file_data = content_resp.json()
+            
             # Decode Base64 content
             file_content = base64.b64decode(file_data['content']).decode('utf-8')
             print(f"✅ Successfully fetched file via Contents API: {expected_file_path}")
+
         except requests.exceptions.RequestException as e:
             errors.append(f"Could not fetch content for `{expected_file_path}` via Contents API: {e}")
+            return errors
+        except KeyError:
+            errors.append("File content not found in API response. Is the file empty or binary?")
             return errors
 
         # --- Content validation ---
@@ -36,7 +42,7 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
         sheet_link_pattern = r"https?://docs\.google\.com/spreadsheets/\S+"
         if not re.search(sheet_link_pattern, file_content):
             errors.append("Day 1 file must contain a valid Google Sheet link.")
-
+        
         # Check required answers
         required_patterns = {
             "Total rows": r"Total rows:\s*6310",
@@ -52,5 +58,5 @@ def check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha):
     # Placeholder for other days
     elif day_number in [2, 3, 4]:
         print(f"[DEBUG] Day {day_number} checks not implemented yet.")
-
+    
     return errors
