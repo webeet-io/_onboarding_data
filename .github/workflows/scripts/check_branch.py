@@ -115,6 +115,7 @@ print(f"Files in this PR: {file_names}")
 pr_head_sha = pr['head']['sha']
 
 # Step 8: Run day-specific checks
+from day_checks import check_day_files
 day_errors = check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha)
 if day_errors:
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
