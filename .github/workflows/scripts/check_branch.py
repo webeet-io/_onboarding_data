@@ -156,3 +156,5 @@ if day_errors:
     exit(1)
 else:
     print(f"✅ All day {day_number} files are correct")
+    comment_body = "✅ All good! Calling in human @apiterwebeet"
+    requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
