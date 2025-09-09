@@ -91,7 +91,7 @@ if branch_match:
     file_names = [f['filename'] for f in pr_files]
     print(f"Files in this PR: {file_names}")
 
-    # Step 8: Run day-specific checks, passing all necessary arguments
+    # Step 8: Run day-specific checks
     day_errors = check_day_files(day_number, auth_headers, pr_files, repo, pr_head_sha)
     if day_errors:
         comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
