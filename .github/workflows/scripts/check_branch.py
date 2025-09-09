@@ -156,5 +156,6 @@ if day_errors:
     exit(1)
 else:
     print(f"✅ All day {day_number} files are correct")
+    comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
     comment_body = "✅ All good! Calling in human @apiterwebeet"
     requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
