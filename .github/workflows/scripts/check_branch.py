@@ -1,10 +1,44 @@
 import os
-import sys
 import requests
 import re
 import jwt
 import time
+import sys
 
+# Define the file checking function within the script
+def check_day_files(day_number, file_names):
+    errors = []
+    
+    # A dictionary to store the expected files for each day
+    expected_files_by_day = {
+        1: {"daily_tasks/day_1/day1_answers.md"},
+        2: {"daily_tasks/day_2/day2_analysis.ipynb"},
+        3: {"daily_tasks/day_3/day3_sql_analysis.ipynb"},
+        4: {"daily_tasks/day_4/sat_modeling.ipynb", "daily_tasks/day_4/cleaned_sat_results.csv"},
+        5: set()  # No files required for day 5
+    }
+
+    files_to_check = expected_files_by_day.get(day_number, set())
+    pr_files_set = set(file_names)
+
+    # Check for missing required files
+    missing_files = files_to_check - pr_files_set
+    if missing_files:
+        for missing_file in sorted(list(missing_files)):
+            errors.append(f"Missing required file: `{missing_file}`.")
+
+    # Check for extra files in the PR that shouldn't be there
+    extra_files = pr_files_set - files_to_check
+    if extra_files:
+        errors.append(f"Unexpected files found in the PR: {', '.join(sorted(list(extra_files)))}")
+
+    if not errors:
+        for expected_file in sorted(list(files_to_check)):
+            print(f"✅ Found expected file: {expected_file}")
+
+    return errors
+
+# --- Main Script Execution ---
 
 # Inputs from workflow
 repo = os.environ['TARGET_REPO']
@@ -114,49 +148,6 @@ file_names = [f['filename'] for f in pr_files]
 print(f"Files in this PR: {file_names}")
 
 # Step 8: Run day-specific checks
-def check_day_files(day_number, file_names):
-    errors = []
-    
-    expected_files_by_day = {
-        1: {"daily_tasks/day_1/day1_answers.md"},
-        2: {"daily_tasks/day_2/day2_analysis.ipynb"},
-        3: {"daily_tasks/day_3/day3_sql_analysis.ipynb"},
-        4: {"daily_tasks/day_4/sat_modeling.ipynb", "daily_tasks/day_4/cleaned_sat_results.csv"},
-        5: set()  # No files required for day 5
-    }
-
-    files_to_check = expected_files_by_day.get(day_number, set())
-    
-    if day_number == 5:
-        print(f"✅ No file checks required for Day {day_number}.")
-        return errors
-    
-    # Check if there are any files for this day in the dictionary
-    if not files_to_check:
-        errors.append(f"Day {day_number} check logic is not defined or requires no files.")
-        return errors
-
-    # Check for extra files in the PR that shouldn't be there
-    pr_files_set = set(file_names)
-    extra_files = pr_files_set - files_to_check
-    if extra_files:
-        errors.append(f"Unexpected files found in the PR: {', '.join(sorted(list(extra_files)))}")
-        # We don't return here so we can also check for missing files
-
-    # Check for missing required files
-    missing_files = files_to_check - pr_files_set
-    if missing_files:
-        for missing_file in sorted(list(missing_files)):
-            errors.append(f"Missing required file: `{missing_file}`.")
-
-    if not errors:
-        for expected_file in sorted(list(files_to_check)):
-            print(f"✅ Found expected file: {expected_file}")
-
-    return errors
-
-
-
 day_errors = check_day_files(day_number, file_names)
 if day_errors:
     comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
@@ -165,7 +156,3 @@ if day_errors:
     exit(1)
 else:
     print(f"✅ All day {day_number} files are correct")
-
-comments_url = f"https://api.github.com/repos/{repo}/issues/{pr_number}/comments"
-comment_body = "✅ Good Job! Calling in human to check the files @apiterwebeet"
-requests.post(comments_url, headers=auth_headers, json={"body": comment_body})
