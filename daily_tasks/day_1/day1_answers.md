@@ -17,7 +17,7 @@
       NoCrim N: 11772
       Prop N: 4482
       Vio N: 3180
-- Bronx incident %: 24.67%
+- Bronx incident %: 24.67
 
 ### Observations:
 - A lots of `N/A` or missing values in incident columns 
