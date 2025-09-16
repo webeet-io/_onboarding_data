@@ -1,9 +1,11 @@
-Answer to the questions
-1. Download the datasets (Done)
+# Answer to the questions
+
+1. Download the datasets (Done) 
 2. Upload the CSV to Google Sheets.(Done)
 3. Link to Google Sheet [View the Google Sheet](https://docs.google.com/spreadsheets/d/1DIzcNSxlzB2cKDN7tTS8CgtEZqfhHjDEhnd593LALn4/edit?usp=sharing)
 
 **Clean the column names:** (Done)
+
   Make all lowercase
   
   Replace spaces with underscores (_)
@@ -33,3 +35,14 @@ Answer to the questions
 	4.	In terms of major incidents, Manhattan (7.08%) leads in internal percentage, though Brooklyn contributes the most (31.42%) to the city’s total major incidents — pointing to different kinds of safety concerns.
  
 	5.	Violation reports are most prevalent in Brooklyn (30.85%) and Bronx (30.60%), suggesting these boroughs face more behavioral or rule-based issues than others.
+
+**Some anomalies**
+
+**🔍 Missing Values Analysis – Key Insights**
+
+	•	The overall percentage of missing values is very low across most columns (under 1%), which means the dataset is generally well-maintained.
+	•	However, two fields show significant data quality issues:
+	•	dbn (15.91%) and location_code (15.93%) have high missing value rates — these are key identifiers and should be addressed before any location-based analysis.
+	•	building_name has the highest missing rate at 40.51%, indicating that building-level data may be incomplete or inconsistently recorded.
+	•	Other location-related fields like postcode, longitude, council_district, and nta also have slight missing values (~0.41–0.60%).
+
