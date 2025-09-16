@@ -4,7 +4,7 @@
 
 ### Answers:
 - Total rows: 6,310
-- Unique schools: 1,891
+- Unique schools: 1,890
 - Most frequent incident type: "nocrim_n" - non-criminal crimes - 11,772
 - Bronx incident %: 28.24%
 
