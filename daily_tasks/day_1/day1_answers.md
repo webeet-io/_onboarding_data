@@ -14,7 +14,7 @@
 > **Standard deviation (where >0):** 14.1  
 
 ---
-
+ 
 ## Observations / Insights
 
 > - The Bronx dominates incident counts: 4 of the top 5 locations are in the Bronx.  
