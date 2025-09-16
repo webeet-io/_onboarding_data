@@ -4,7 +4,7 @@
 
 ### Answers:
 - Total rows: 6310
-- Unique schools: 2325 (column added with concatination of "location_name" and "dbn" )
+- Unique schools: 1890 (based on "dbn")
 - Most frequent incident type: “Number of Non-Criminal Crimes”
 - Bronx incident %: 28.24%
 
@@ -13,4 +13,5 @@
 - most schools with missings in column "register" also have missings for crime incident  
 - There are schools which appear more than once (duplicates)
 - There are schools with different spelling of name but same bdn
+- All rows with missing dbn are "consolidated" 
 
