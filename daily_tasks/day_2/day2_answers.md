@@ -1,7 +1,5 @@
 ## Day 2 – NYC High School Directory
 
-🔗 [My Notebook](LINK_TO_YOUR_NOTEBOOK_ON_GITHUB)
-
 ### Answers:
 - Total rows in dataset:                            435
 - Unique schools in Brooklyn:                       121
