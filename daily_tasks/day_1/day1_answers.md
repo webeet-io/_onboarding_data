@@ -3,7 +3,7 @@
 
 ### Day 1 - School Incident Analysis 
 
-https://docs.google.com/spreadsheets/d/1eJOhw4eceN1-g86-N0_L323M7u8KdtdxUozM7aJSBnk/edit?usp=sharing
+https://docs.google.com/document/d/1GvAy22iL9vnuvvHptvaShSiGgJt3a32ypy5dZ-xtCjo/edit?usp=sharing
 
 ## Answers:
 - Total-rows     6310
