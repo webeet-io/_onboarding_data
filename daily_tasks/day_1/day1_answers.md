@@ -7,4 +7,5 @@ Google Sheet Link: https://docs.google.com/spreadsheets/d/1zHtCjTCdJnbUOkFZHmK9p
 - % of incident in Bronx : 28.56%
 
 Observations
-- 
+- The Bronx dominates incident counts : 4 of the top 5 locations are in Bronx.
+- some rows contain N/A in the incident columns which could indicate missing or inconsistent reporting.
