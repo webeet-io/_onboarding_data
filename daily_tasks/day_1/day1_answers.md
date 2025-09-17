@@ -13,4 +13,5 @@ Key Findings
 
 Observations 
 - Several records are missing DBN codes, suggesting incomplete data entry.
+- One school in the Bronx reported over 10% of all violent incidents, making it an outlier compared to other schools.  
 
