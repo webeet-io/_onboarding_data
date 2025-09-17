@@ -10,4 +10,4 @@
 
 ### Observations:
 - Yearly from non-crimal crimes go up 2013 - 2016, while all incidents decreased in the same time span.
-- Brooklyn had the highest incident rates from every year from 2013 -2016.
+- Brooklyn had the highest incident rates from every year from 2013 - 2016.
