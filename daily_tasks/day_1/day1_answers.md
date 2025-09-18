@@ -8,8 +8,10 @@
 
 > **Total rows:** 6310  
 > **Unique schools (DBN):** 1890  
-> **Most frequent incident type:** NoCrim N (highest count)  
-> **% of incidents in the Bronx:** 24.6 %  
+> **Most frequent incident type:** NoCrim N (highest count)
+> **Total # of incidents:** 28,151
+> **Total # of incidents 'Bronx':** 7,949  
+> **% of incidents in the Bronx:** 28.24% %  
 > **Mean incidents per school (where >0):** 10.4  
 > **Standard deviation (where >0):** 14.1  
 
