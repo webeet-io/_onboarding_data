@@ -1,15 +1,21 @@
 ## Day 1 Task - School Incident Analysis
 
-### Link: https://docs.google.com/spreadsheets/d/10T8PHZntYof7eob_fcPcjpQk6LvN7D2j5y1exMacxPg/edit?usp=sharing
+### Link: 
+https://docs.google.com/spreadsheets/d/1WsN6WAn41JN4nfIHpJj-evdKwjLuiTvVdt1968FrPiM/edit?usp=sharing
 
 ### Answers:
 - Total rows (before cleaning): **6311**
-- Total rows (after cleaning): **3560**
-- Unique school Buildings: **1267**
-- Total schools (note that there are some buildings with multiple schools): **5319**
+- Unique schools: **1890**- 
 - Most frequent incident type: **nocrim_n** with **11 772** incidents
-- Bronx incident percentage: **27.12%**
+- Bronx incident percentage: **27.40%**
 
 ### Observations:
-- Brooklyn has the largest number of schools (1685), the highest amount of registered students (889189) and the highest amount of criminal incidents (554) which shows a clear correlation between the size of the population and the crime rate. The higher the population, the higher the crime count
-- Overall the number of registered students have been steadily increasing over the years, the rate of incidents has decreased by 6.94%
+- Brooklyn has the largest number of schools (4335), the highest amount of registered students (1201214) and the highest amount of criminal incidents (554) which shows a clear correlation between the size of the student population and the crime rate. The higher the population, the higher the crime count
+- Overall the number of registered students have been steadily increasing over the years, however the rate of incidents has decreased by 6.94% between 3013-14 and 2015-16
+- In the raw data source, in column 'I' which is the number of registered students, there are 2 anomalies:
+  
+  1. The data type in column 'I' is not numeric as it includes blank cells and 'N/A' values. As a result you cannot conduct any calculations using the data directly from column 'I' which may cause complications later down the line when performing further analysis. As a fix for this anomaly, I entered a formula into column 'AI' of the same sheet where I replaced the blank and 'N/A' values with 0.
+ 
+  2. "N/A" values in the incident value columns indicates that the incident counts grouped across multiple schools that are in the same location/building. The grouped rows can be identified by the word “consolidated" in columns “D”, “J” and “L” along with a blank value in column “C”. As a result of the groupings, column “I” reports **both individual and total** registered students for these groups, which causes the anomaly that inflates the student counts. 
+
+While this does not affect the current activity, creating a cleaned table that handles "N/A" rows is recommended for future analyses. 
