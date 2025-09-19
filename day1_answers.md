@@ -3,7 +3,7 @@
 
 ## Answers:
 - Total rows: 6313
-- Unique Schools: 1369
+- Unique Schools: 1891
 - Most frequent incident type: 'nocrim_m'
 - Brox incident %: 28.2%
 
