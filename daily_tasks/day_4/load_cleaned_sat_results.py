@@ -2,11 +2,11 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine
 
-# --- Pfade definieren ---
+# --- Paths ---
 RAW_PATH = "day_4_datasets/sat-results.csv"
-CLEANED_PATH = "day_4_task/sat_results_cleaned.csv"
+CLEANED_PATH = "sat_results_cleaned.csv"
 
-# --- Cleaning/Erstellung der bereinigten CSV falls nicht vorhanden ---
+# --- Create cleaned CSV if not exists ---
 if not os.path.exists(CLEANED_PATH):
     print("Cleaned CSV not found. Creating now...")
 
@@ -20,7 +20,6 @@ if not os.path.exists(CLEANED_PATH):
     df = df.drop_duplicates(subset="dbn", keep="first")
 
     # 4. Remove or merge duplicate/misspelled columns
-    # Drop duplicate reading score if it exists
     if "sat_critical_readng_avg_score" in df.columns:
         df = df.drop(columns=["sat_critical_readng_avg_score"])
 
@@ -55,7 +54,7 @@ if not os.path.exists(CLEANED_PATH):
 else:
     print(f"Cleaned CSV already exists at {CLEANED_PATH}.")
 
-# --- Datenbank-Upload ---
+# --- Database Upload ---
 
 # 1. Load cleaned CSV
 df_clean = pd.read_csv(CLEANED_PATH)
@@ -71,7 +70,15 @@ engine = create_engine(
 )
 
 # 3. Write data to PostgreSQL
-table_name = "sat_results"
-df_clean.to_sql(table_name, engine, index=False, if_exists="append")  # 'replace' for overwrite
+schema = "nyc_schools"
+table_name = "lars_petschke_sat_results"
+df_clean.to_sql(
+    name=table_name,
+    con=engine,
+    schema=schema,
+    index=False,
+    if_exists="replace"   # or "append" if you want to add data
+)
 
-print(f"Data from {CLEANED_PATH} successfully loaded into table '{table_name}' in the PostgreSQL database.")
+print(f"Data from {CLEANED_PATH} successfully loaded into table '{schema}.{table_name}' in the PostgreSQL database.")
+
