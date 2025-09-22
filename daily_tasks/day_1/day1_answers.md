@@ -7,7 +7,7 @@ https://docs.google.com/spreadsheets/d/1WsN6WAn41JN4nfIHpJj-evdKwjLuiTvVdt1968Fr
 - Total rows (before cleaning): **6311**
 - Unique schools: **1890** 
 - Most frequent incident type: **nocrim_n** with **11 772** incidents
-- Bronx incident percentage: **28.38%**
+- Bronx incident percentage: **28.24%**
 
 ### Observations:
 - Brooklyn has the largest number of schools (4335), the highest amount of registered students (1201214) and the highest amount of criminal incidents (8483) which shows a clear correlation between the size of the student population and the crime rate. The higher the population, the higher the crime count
