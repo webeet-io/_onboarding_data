@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 
 # --- Pfade definieren ---
 RAW_PATH = "day_4_datasets/sat-results.csv"
-CLEANED_PATH = "day_4_task/sat_results_cleaned.csv"
+CLEANED_PATH = "sat_results_cleaned.csv"
 
 # --- Cleaning/Erstellung der bereinigten CSV falls nicht vorhanden ---
 if not os.path.exists(CLEANED_PATH):
