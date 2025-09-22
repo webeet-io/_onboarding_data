@@ -1,6 +1,6 @@
 # 📎 NYC Schools Portfolio Project
 
-🔗 **Public GitHub Repository**: [NYC-schools-analysis]((https://github.com/yana-yelnikova/NYC-schools-analysis)
+🔗 **Public GitHub Repository**: [NYC-schools-analysis](https://github.com/yana-yelnikova/NYC-schools-analysis)
 
 This repository contains my cleaned, documented, and organized portfolio version of the NYC Schools Data Analysis project. It includes:
 
