@@ -1,0 +1,16 @@
+## Day 1 – School Incident Analysis
+
+🔗 [My Google Sheet](https://docs.google.com/spreadsheets/d/...)
+
+### Answers:
+- Total rows:6310
+- Unique schools: 1890
+- Most frequent incident type: “nocrim_n”
+- Bronx incident %: 24,58%
+
+### Observations:
+- Brooklyn und Bronx dominieren die Vorfallzahlen.
+
+- No-Crime Incidents machen den Großteil aus 
+
+- Staten Island ist kaum vertreten.
