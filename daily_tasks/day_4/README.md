@@ -53,12 +53,12 @@ Schema:
 CREATE TABLE nyc_schools.isabella_leach_sat_results (
     dbn TEXT PRIMARY KEY,
     school_name TEXT,
-    num_sat_test_takers BIGINT,
-    sat_critical_reading_avg_score BIGINT,
-    sat_math_avg_score BIGINT,
-    sat_writing_avg_score BIGINT,
+    num_sat_test_takers INT,
+    sat_critical_reading_avg_score FLOAT,
+    sat_math_avg_score FLOAT,
+    sat_writing_avg_score FLOAT,
     internal_school_id TEXT,
     contact_extension TEXT,
-    pct_students_tested NUMERIC,
+    pct_students_tested FLOAT,
     academic_tier_rating TEXT
-); 
+);
