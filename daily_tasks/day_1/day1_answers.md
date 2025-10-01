@@ -2,7 +2,7 @@ https://docs.google.com/spreadsheets/d/1tKmOrBg24JJHOA0RnU_sH6-Qit9gsYZ0Mvi0et7t
 1. There are 6310 rows with deviations between the columns.
 2. There are 1890 unique schools.
 3. The non-criminal incidents were most frequent (11772)
-4. 0.28% of incidents was in Bronx (7949/28151)
+4. 0.42% of incidents was in Bronx (7949/18585)
 
 
 
