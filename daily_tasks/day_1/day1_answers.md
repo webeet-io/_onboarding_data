@@ -1,16 +1,16 @@
 # Onboarding Day 1: School Incident Analysis - Answers
 
-[Here](https://docs.google.com/spreadsheets/d/1zbQY23ITLgMxgfDk0eIK354g8wK13n6wOKhqZ1ZwDK0/edit?usp=sharing), you can find the Google Sheet document containing the data, cleaned data, and analysis.
+[My Google Sheet](https://docs.google.com/spreadsheets/d/1zbQY23ITLgMxgfDk0eIK354g8wK13n6wOKhqZ1ZwDK0/edit?usp=sharing)
 
 ## Explore dataset
 
 **Q**: How many total rows are there? 
 
-**A**: *The dataset contains 6,311 rows.*
+**A**: *The dataset contains 6,310 rows.*
 
 **Q**: How many unique schools are listed?
 
-**A**: *There are 1890 unique schools listed in the dataset*
+**A**: *There are 2262 unique schools listed in the dataset*
 
 **Q**: What is the most frequent incident type?
 
@@ -22,9 +22,7 @@
 
 ## Anomalies
 
-* There is **missing data in several columns**, like **DBN, Register**, and **Building Name**. Other rows have N/A across all incident type fields, resulting in a loss of incident information for those records.
-
-* **Missing DBNs could maybe be reconstructed** using location or building information. Other missing values may need to be omitted or imputed to ensure data accuracy.
+* There is **missing data in several columns**, like **DBN, Register**, and **Building Name**. Missing DBNs could maybe be reconstructed using location or building information. Other missing values may need to be omitted or imputed to ensure data accuracy.
 
 * Some entries report **0 incidents or have missing data (N/A) across all incident types**. This could indicate mistakes during data entry or reports of 0 incidents.
 
