@@ -10,7 +10,7 @@
 
 **Q**: How many unique schools are listed?
 
-**A**: *There are 2262 unique schools listed in the dataset*
+**A**: *There are 1891 unique schools listed in the dataset*
 
 **Q**: What is the most frequent incident type?
 
