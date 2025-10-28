@@ -9,7 +9,7 @@ Link:
 
 ### Answers:
 - Total rows: 6310
-- Unique schools: 2325
+- Unique schools: 1891
 - Most frequent incident type: nocrim_n
 - Bronx incident %: 28.24
   
