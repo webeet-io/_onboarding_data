@@ -9,7 +9,7 @@ This report summarizes key statistics and findings from the provided dataset.
 | Metric | Answer | Notes |
 | :--- | :--- | :--- |
 | **Total Rows** | **6,310** | Total records in the dataset. |
-| **Unique Schools** | **2,321** | Total number of unique school entities listed. |
+| **Unique Schools** | **1,890** | Total number of unique school entities listed. |
 | **Most Frequent Incident Type** | **nocrim\_n** | This category has the highest total count of incidents: **11,772**. |
 | **Incidents in The Bronx (%)** | **28.24%** | Percentage of all incidents that occurred within The Bronx. |
 
