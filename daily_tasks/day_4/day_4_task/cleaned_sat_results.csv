@@ -1,0 +1,479 @@
+dbn,school_name,num_of_sat_test_takers,sat_critical_reading_avg_score,sat_math_avg_score,sat_writing_avg_score,internal_school_id,contact_extension,pct_students_tested,academic_tier_rating,avg_sat_score
+01M292,Henry Street School For International Studies,29.0,355.0,404.0,363.0,218160,x345,78.0,2.0,374.0
+01M448,University Neighborhood High School,91.0,383.0,423.0,366.0,268547,x234,,3.0,390.67
+01M450,East Side Community School,70.0,377.0,402.0,370.0,236446,x123,,3.0,383.0
+01M458,Forsyth Satellite Academy,7.0,414.0,401.0,359.0,427826,x123,92.0,4.0,391.33
+01M509,Marta Valle High School,44.0,390.0,433.0,384.0,672714,x123,92.0,2.0,402.33
+01M515,Lower East Side Preparatory High School,112.0,332.0,557.0,316.0,414951,x345,,3.0,401.67
+01M539,"New Explorations Into Science, Technology And Math High School",159.0,522.0,574.0,525.0,697107,,78.0,2.0,540.33
+01M650,Cascades High School,18.0,417.0,418.0,411.0,297600,,92.0,4.0,415.33
+01M696,Bard High School Early College,130.0,624.0,604.0,628.0,881396,x234,,,618.67
+02M047,47 The American Sign Language And English Secondary School,16.0,395.0,400.0,387.0,751293,,78.0,4.0,394.0
+02M288,Food And Finance High School,62.0,409.0,393.0,392.0,366268,,92.0,,398.0
+02M294,Essex Street Academy,53.0,394.0,384.0,378.0,782993,x345,78.0,4.0,385.33
+02M296,High School Of Hospitality Management,58.0,374.0,375.0,362.0,828714,,92.0,3.0,370.33
+02M298,Pace High School,85.0,423.0,438.0,432.0,778948,x345,78.0,2.0,431.0
+02M300,"Urban Assembly School Of Design And Construction, The",48.0,404.0,449.0,416.0,107670,x345,92.0,,423.0
+02M303,"Facing History School, The",76.0,353.0,358.0,340.0,612918,,,,350.33
+02M305,"Urban Assembly Academy Of Government And Law, The",50.0,375.0,388.0,385.0,746648,,85.0,,382.67
+02M308,Lower Manhattan Arts Academy,40.0,403.0,392.0,405.0,642722,x123,,4.0,400.0
+02M313,"James Baldwin School, The: A School For Expeditionary Learning",69.0,408.0,390.0,390.0,981746,x123,,2.0,396.0
+02M316,"Urban Assembly School Of Business For Young Women, The",42.0,373.0,370.0,384.0,183677,x123,92.0,,375.67
+02M374,Gramercy Arts High School,60.0,391.0,391.0,394.0,104952,x234,85.0,,392.0
+02M376,Nyc Ischool,92.0,473.0,483.0,479.0,553041,x345,78.0,4.0,478.33
+02M392,Manhattan Business Academy,,,,,501072,,85.0,,
+02M393,Business Of Sports School,,,,,143204,x234,,2.0,
+02M394,Emma Lazarus High School,79.0,319.0,512.0,357.0,356123,x345,78.0,2.0,396.0
+02M399,The High School For Language And Diplomacy,,,,,371710,x123,85.0,,
+02M400,High School For Environmental Studies,263.0,465.0,493.0,461.0,449778,,,2.0,473.0
+02M407,Institute For Collaborative Education,54.0,492.0,465.0,467.0,992626,,85.0,,474.67
+02M408,Professional Performing Arts High School,94.0,509.0,490.0,523.0,765316,x234,92.0,1.0,507.33
+02M411,Baruch College Campus High School,104.0,496.0,563.0,518.0,381202,,,3.0,525.67
+02M412,N.Y.C. Lab School For Collaborative Studies,114.0,537.0,590.0,550.0,425108,x345,92.0,4.0,559.0
+02M413,School Of The Future High School,66.0,517.0,533.0,515.0,319140,x234,85.0,3.0,521.67
+02M414,N.Y.C. Museum School,103.0,468.0,492.0,459.0,414827,x234,92.0,1.0,473.0
+02M416,Eleanor Roosevelt High School,127.0,572.0,594.0,592.0,799903,x345,92.0,2.0,586.0
+02M418,Millennium High School,144.0,528.0,553.0,533.0,848911,x123,85.0,2.0,538.0
+02M419,Landmark High School,62.0,390.0,399.0,381.0,166135,x123,78.0,2.0,390.0
+02M420,High School For Health Professions And Human Services,336.0,429.0,449.0,428.0,909712,x345,92.0,3.0,435.33
+02M425,Leadership And Public Service High School,84.0,416.0,426.0,391.0,436071,x234,92.0,4.0,411.0
+02M427,Manhattan Academy For Arts & Language,,,,,521180,x234,,4.0,
+02M429,Legacy School For Integrated Studies,29.0,356.0,357.0,349.0,536177,,92.0,1.0,354.0
+02M437,Hudson High School Of Learning Technologies,,,,,254767,x345,,2.0,
+02M438,International High School At Union Square,,,,,259655,x123,78.0,1.0,
+02M439,Manhattan Village Academy,95.0,441.0,473.0,458.0,190235,,85.0,1.0,457.33
+02M440,Bayard Rustin Educational Complex,59.0,378.0,365.0,368.0,649686,x234,92.0,2.0,370.33
+02M449,Vanguard High School,72.0,395.0,416.0,388.0,320922,x345,85.0,4.0,399.67
+02M459,Manhattan International High School,49.0,376.0,460.0,391.0,563511,,85.0,3.0,409.0
+02M460,Washington Irving High School,151.0,373.0,387.0,360.0,717859,x123,78.0,3.0,373.33
+02M473,Washington Irving Yabc,,,,,563977,x345,92.0,3.0,
+02M475,Stuyvesant High School,832.0,679.0,735.0,682.0,295947,,,4.0,698.67
+02M489,High School Of Economics And Finance,167.0,443.0,489.0,442.0,775466,x234,92.0,4.0,458.0
+02M500,Unity Center For Urban Technologies,25.0,370.0,349.0,351.0,560831,x123,,,356.67
+02M519,Talent Unlimited High School,81.0,469.0,472.0,475.0,641361,x345,,,472.0
+02M520,Murry Bergtraum High School For Business Careers,264.0,407.0,440.0,393.0,892839,,92.0,2.0,413.33
+02M529,Jacqueline Kennedy Onassis High School,131.0,414.0,425.0,400.0,643403,x123,85.0,4.0,413.0
+02M531,Repertory Company High School For Theatre Arts,42.0,429.0,404.0,420.0,630240,x345,,,417.67
+02M542,Manhattan Bridges High School,66.0,336.0,378.0,344.0,794996,x123,85.0,,352.67
+02M543,New Design High School,73.0,391.0,395.0,382.0,246078,x234,78.0,2.0,389.33
+02M544,Independence High School,14.0,389.0,371.0,335.0,657823,x345,85.0,3.0,365.0
+02M545,High School For Dual Language And Asian Studies,78.0,412.0,581.0,431.0,216576,x234,78.0,1.0,474.67
+02M550,Liberty High School Academy For Newcomers,26.0,368.0,436.0,352.0,651973,x123,78.0,4.0,385.33
+02M551,The Urban Assembly New York Harbor School,77.0,405.0,423.0,384.0,527749,x345,92.0,3.0,404.0
+02M560,High School M560 S City As School,56.0,498.0,440.0,477.0,785873,x345,85.0,4.0,471.67
+02M565,Urban Academy Laboratory High School,30.0,527.0,508.0,512.0,660366,x123,85.0,4.0,515.67
+02M570,Satellite Academy High School,33.0,350.0,337.0,345.0,875682,x345,85.0,1.0,344.0
+02M575,Manhattan Comprehensive Night And Day High School,121.0,345.0,517.0,343.0,683603,x123,78.0,1.0,401.67
+02M580,Richard R. Green High School Of Teaching,84.0,408.0,384.0,403.0,947461,x234,,4.0,398.33
+02M586,Harvey Milk High School,9.0,458.0,416.0,429.0,392545,,85.0,4.0,434.33
+02M600,The High School Of Fashion Industries,335.0,423.0,423.0,411.0,894293,x123,78.0,1.0,419.0
+02M605,Humanities Preparatory Academy,36.0,426.0,403.0,426.0,930254,x345,,1.0,418.33
+02M615,Chelsea Career And Technical Education High School,83.0,399.0,418.0,390.0,477516,x234,92.0,4.0,402.33
+02M620,Norman Thomas High School,154.0,370.0,379.0,359.0,655935,x345,,,369.33
+02M625,High School Of Graphic Communication Arts,191.0,395.0,382.0,376.0,754225,x234,,2.0,384.33
+02M630,Art And Design High School,270.0,444.0,441.0,430.0,850641,x234,85.0,,438.33
+02M655,Life Sciences Secondary School,61.0,409.0,424.0,403.0,885497,x345,92.0,2.0,412.0
+03M283,Manhattan Theatre Lab High School,27.0,406.0,379.0,408.0,413786,x234,85.0,3.0,397.67
+03M299,"High School For Arts, Imagination And Inquiry",49.0,374.0,384.0,374.0,737942,x234,,1.0,377.33
+03M307,"Urban Assembly School For Media Studies, The",41.0,384.0,390.0,370.0,448562,x345,78.0,4.0,381.33
+03M402,The Urban Assembly School For Green Careers,,,,,699396,x345,78.0,3.0,
+03M403,The Global Learning Collaborative,,,,,453954,x345,78.0,1.0,
+03M404,Innovation Diploma Plus,12.0,416.0,403.0,381.0,954823,x345,92.0,4.0,400.0
+03M415,Wadleigh Secondary School For The Performing & Visual Arts,32.0,371.0,,370.0,365679,,78.0,4.0,370.5
+03M417,Frank Mccourt High School,,,,,355018,x345,85.0,4.0,
+03M470,Louis D. Brandeis High School,131.0,370.0,390.0,358.0,731158,x234,,4.0,372.67
+03M479,Beacon High School,261.0,577.0,575.0,592.0,678328,x234,92.0,2.0,581.33
+03M485,Fiorello H. Laguardia High School Of Music & Art And Performing Arts,531.0,566.0,564.0,577.0,567972,x345,92.0,3.0,569.0
+03M492,"High School For Law, Advocacy And Community Justice",66.0,396.0,398.0,402.0,778640,x345,92.0,2.0,398.67
+03M494,High School Of Arts And Technology,75.0,433.0,433.0,411.0,921952,,85.0,1.0,425.67
+03M505,Edward A. Reynolds West Side High School,35.0,401.0,369.0,351.0,635847,x234,92.0,3.0,373.67
+03M541,Manhattan / Hunter Science High School,111.0,473.0,506.0,467.0,955192,x123,78.0,2.0,482.0
+03M577,Young Adult Borough Center At Louis D. Brandeis Hs,,,,,412494,,85.0,2.0,
+03M860,Frederick Douglass Academy Ii Secondary School,43.0,356.0,379.0,361.0,503561,x345,92.0,2.0,365.33
+04M409,Coalition School For Social Change,48.0,354.0,357.0,373.0,379117,x123,92.0,3.0,361.33
+04M435,Manhattan Center For Science And Mathematics,375.0,461.0,514.0,455.0,292563,x123,85.0,1.0,476.67
+04M495,Park East High School,51.0,373.0,379.0,376.0,671970,,,2.0,376.0
+04M555,Central Park East High School,73.0,405.0,421.0,395.0,970677,x345,78.0,2.0,407.0
+04M610,Young Women'S Leadership School,70.0,432.0,446.0,448.0,880781,x234,92.0,1.0,442.0
+04M635,Academy Of Environmental Science Secondary High School,48.0,369.0,369.0,357.0,968745,x234,92.0,2.0,365.0
+04M680,"Heritage School, The",31.0,358.0,351.0,345.0,141965,,78.0,3.0,351.33
+05M285,Harlem Renaissance High School,29.0,357.0,318.0,333.0,737575,x234,92.0,3.0,336.0
+05M304,Mott Hall High School,54.0,413.0,399.0,398.0,296405,x123,78.0,2.0,403.33
+05M362,"Columbia Secondary School For Math, Science, And Engineering",,,,,206377,x234,,4.0,
+05M367,Academy For Social Action: A College Board School,33.0,354.0,366.0,342.0,680647,x345,78.0,3.0,354.0
+05M369,Urban Assembly School For The Performing Arts,56.0,360.0,353.0,364.0,442306,x234,85.0,3.0,359.0
+05M469,Choir Academy Of Harlem,20.0,354.0,360.0,385.0,594021,x234,85.0,4.0,366.33
+05M499,Frederick Douglass Academy,214.0,458.0,474.0,442.0,813534,x123,92.0,1.0,458.0
+05M670,Thurgood Marshall Academy For Learning And Social Change,66.0,396.0,402.0,404.0,530977,x345,92.0,3.0,400.67
+05M685,Bread & Roses Integrated Arts High School,61.0,369.0,361.0,355.0,371377,x123,,,361.67
+05M692,"High School For Mathematics, Science And Engineering At City College",101.0,605.0,654.0,588.0,302370,,78.0,1.0,615.67
+06M293,City College Academy Of The Arts,60.0,408.0,446.0,416.0,604767,x234,,3.0,423.33
+06M346,Community Health Academy Of The Heights,55.0,362.0,376.0,367.0,654733,,,2.0,368.33
+06M348,Washington Heights Expeditionary Learning School,70.0,380.0,395.0,399.0,339162,x123,78.0,1.0,391.33
+06M423,High School For Excellence And Innovation,,,,,973050,x123,92.0,,
+06M457,George Washington Yabc,7.0,394.0,357.0,346.0,381754,,92.0,4.0,365.67
+06M462,High School For International Business And Finance,76.0,365.0,384.0,378.0,933430,,,,375.67
+06M463,High School For Media And Communications,63.0,369.0,380.0,349.0,131970,x123,92.0,3.0,366.0
+06M467,High School For Law And Public Service,94.0,363.0,378.0,361.0,344969,x234,78.0,2.0,367.33
+06M468,High School For Health Careers And Sciences,24.0,400.0,422.0,402.0,842071,x123,78.0,1.0,408.0
+06M540,A. Philip Randolph Campus High School,228.0,430.0,456.0,423.0,547675,x123,78.0,3.0,436.33
+06M552,Gregorio Luperon High School For Science And Mathematics,56.0,339.0,349.0,326.0,603045,,78.0,2.0,338.0
+07X221,South Bronx Preparatory: A College Board School,65.0,364.0,378.0,348.0,277389,x345,92.0,,363.33
+07X321,Crotona Academy High School,9.0,379.0,364.0,382.0,821462,,92.0,4.0,375.0
+07X334,International Community High School,34.0,310.0,324.0,311.0,791798,,85.0,4.0,315.0
+07X379,Jill Chaifetz Transfer High School,,,,,282379,x345,92.0,,
+07X381,Bronx Haven High School,,,,,540360,x234,78.0,4.0,
+07X427,Community School For Social Justice,43.0,361.0,359.0,357.0,460390,x234,92.0,1.0,359.0
+07X473,Mott Haven Village Preparatory High School,63.0,351.0,375.0,371.0,922114,x345,78.0,1.0,365.67
+07X495,University Heights Secondary School,79.0,403.0,394.0,404.0,913548,x234,85.0,3.0,400.33
+07X500,Hostosslincoln Academy Of Science,66.0,420.0,426.0,411.0,852272,x123,85.0,2.0,419.0
+07X520,Foreign Language Academy Of Global Studies,64.0,399.0,396.0,391.0,458204,x345,,3.0,395.33
+07X527,Bronx Leadership Academy Ii High School,62.0,362.0,378.0,363.0,553153,x345,,4.0,367.67
+07X547,New Explorers High School,28.0,367.0,356.0,361.0,113401,x123,92.0,,361.33
+07X548,Urban Assembly School For Careers In Sports,44.0,387.0,411.0,383.0,875037,x345,,2.0,393.67
+07X551,Bronx Academy Of Letters,51.0,413.0,381.0,407.0,412580,x234,92.0,3.0,400.33
+07X600,Alfred E. Smith Career And Technical Education High School,76.0,394.0,400.0,364.0,327975,x123,78.0,1.0,386.0
+07X655,Samuel Gompers Career And Technical Education High School,47.0,398.0,416.0,370.0,723932,,,1.0,394.67
+07X670,Health Opportunities High School,114.0,363.0,368.0,364.0,599605,x345,85.0,,365.0
+08X269,Bronx Studio School For Writers And Artists,,,,,720196,x345,92.0,,
+08X282,Women'S Academy Of Excellence,44.0,407.0,386.0,378.0,620873,x345,,2.0,390.33
+08X293,Renaissance High School For Musical Theater & Technology,52.0,384.0,385.0,389.0,908269,x123,78.0,2.0,386.0
+08X295,Gateway School For Environmental Research And Technology,41.0,416.0,390.0,394.0,939020,,78.0,,400.0
+08X305,Pablo Neruda Academy For Architecture And World Studies,67.0,337.0,361.0,340.0,159654,x123,78.0,2.0,346.0
+08X312,Millennium Art Academy,67.0,387.0,402.0,375.0,635239,x234,78.0,1.0,388.0
+08X332,Holcombe L. Rucker School Of Community Research,39.0,363.0,371.0,350.0,953485,x123,78.0,1.0,361.33
+08X367,"Archimedes Academy For Math, Science And Technology Applications",,,,,386522,x234,85.0,1.0,
+08X376,"Antonia Pantoja Preparatory Academy, A College Board School",,,,,314160,,,3.0,
+08X377,Bronx Community High School,9.0,367.0,369.0,376.0,146673,x123,,,370.67
+08X405,Herbert H. Lehman High School,415.0,412.0,436.0,393.0,534496,x234,92.0,2.0,413.67
+08X408,Herbert H. Lehman Yabc,6.0,402.0,373.0,413.0,399276,x123,85.0,2.0,396.0
+08X432,Bronx Bridges High School,,,,,108789,,78.0,1.0,
+08X452,Bronx Guild,39.0,369.0,371.0,365.0,915453,x234,,1.0,368.33
+08X507,Stevenson Yabc,,,,,115369,,85.0,,
+08X519,"Felisa Rincon De Gautier Institute For Law And Public Policy, The",68.0,373.0,370.0,356.0,719359,,,3.0,366.33
+08X530,Banana Kelly High School,54.0,373.0,381.0,377.0,189134,x345,92.0,3.0,377.0
+08X537,Bronx Arena High School,,,,,285492,x234,78.0,2.0,
+08X540,School For Community Research And Learning,16.0,366.0,400.0,368.0,504978,,78.0,4.0,378.0
+08X560,High School X560 S Bronx Academy High School,9.0,404.0,368.0,399.0,906309,x234,78.0,2.0,390.33
+08X650,Jane Addams High School For Academic Careers,78.0,377.0,359.0,376.0,411110,x234,78.0,,370.67
+09X227,Bronx Expeditionary Learning High School,39.0,324.0,376.0,349.0,958742,x123,92.0,,349.67
+09X231,Eagle Academy For Young Men,78.0,373.0,387.0,374.0,831788,x123,78.0,4.0,378.0
+09X239,"Urban Assembly Academy For History And Citizenship For Young Men, The",33.0,372.0,355.0,357.0,746616,x345,85.0,4.0,361.33
+09X241,"Urban Assembly School For Applied Math And Science, The",80.0,411.0,464.0,415.0,430330,x234,85.0,2.0,430.0
+09X250,Eximius College Preparatory Academy: A College Board School,50.0,393.0,394.0,382.0,183756,x345,78.0,4.0,389.67
+09X252,Mott Hall Bronx High School,67.0,369.0,367.0,356.0,183078,x345,85.0,4.0,364.0
+09X260,Bronx Center For Science And Mathematics,81.0,459.0,480.0,457.0,840464,x234,85.0,,465.33
+09X263,Validus Preparatory Academy: An Expeditionary Learning School,74.0,356.0,363.0,356.0,250874,x123,92.0,,358.33
+09X276,Leadership Institute,30.0,361.0,353.0,367.0,601974,x234,85.0,3.0,360.33
+09X297,Morris Academy For Collaborative Studies,38.0,386.0,386.0,376.0,593297,x123,92.0,1.0,382.67
+09X324,Bronx Early College Academy For Teaching & Learning,,,,,120251,x234,85.0,3.0,
+09X329,Dreamyard Preparatory School,51.0,382.0,365.0,391.0,559037,x234,85.0,4.0,379.33
+09X365,Academy For Language And Technology,54.0,315.0,339.0,297.0,289455,,,1.0,317.0
+09X403,Bronx International High School,49.0,314.0,312.0,339.0,792726,x345,78.0,4.0,321.67
+09X404,School For Excellence,32.0,363.0,360.0,351.0,738581,x234,85.0,2.0,358.0
+09X412,Bronx High School Of Business,34.0,356.0,376.0,351.0,160081,x234,85.0,1.0,361.0
+09X413,Bronx High School For Medical Science,64.0,400.0,419.0,402.0,769242,,92.0,4.0,407.0
+09X414,Jonathan Levin High School For Media And Communications,35.0,379.0,364.0,379.0,270670,x123,85.0,2.0,374.0
+09X505,"Bronx School For Law, Government And Justice",80.0,404.0,418.0,402.0,568598,x345,,4.0,408.0
+09X517,Frederick Douglass Academy Iii Secondary School,50.0,368.0,384.0,369.0,898217,x345,85.0,3.0,373.67
+09X525,Bronx Leadership Academy High School,114.0,384.0,394.0,388.0,906925,x234,92.0,1.0,388.67
+09X543,High School For Violin And Dance,27.0,353.0,315.0,371.0,788221,x345,85.0,,346.33
+10X141,Riverdale / Kingsbridge Academy (Middle School / High School 141),113.0,438.0,455.0,440.0,718131,x123,78.0,,444.33
+10X213,Bronx Engineering And Technology Academy,86.0,373.0,412.0,365.0,163342,x345,,4.0,383.33
+10X225,Theatre Arts Production Company School,59.0,405.0,,394.0,827176,x345,78.0,,399.5
+10X237,"The Marie Curie School For Medicine, Nursing, And Health Professions",79.0,382.0,393.0,382.0,652542,x345,78.0,1.0,385.67
+10X243,West Bronx Academy For The Future,26.0,382.0,406.0,370.0,532813,x123,92.0,2.0,386.0
+10X268,Kingsbridge International High School,52.0,304.0,356.0,302.0,127586,x234,92.0,2.0,320.67
+10X284,Bronx School Of Law And Finance,54.0,402.0,395.0,385.0,105294,x123,,2.0,394.0
+10X319,Providing Urban Learners Success In Education High School,,,,,172549,x345,92.0,,
+10X342,International School For Liberal Arts,49.0,300.0,333.0,301.0,421471,x123,78.0,,311.33
+10X368,Instech Academy (M.S. / High School 368),111.0,390.0,408.0,383.0,503135,,85.0,3.0,393.67
+10X374,Knowledge And Power Preparatory Academy International High School (Kappa),61.0,392.0,401.0,387.0,909525,x345,,2.0,393.33
+10X397,English Language Learners And International Support Preparatory Academy (Ellis),38.0,343.0,356.0,330.0,567351,x123,78.0,,343.0
+10X433,High School For Teaching And The Professions,57.0,370.0,371.0,365.0,538852,x345,85.0,1.0,368.67
+10X434,Belmont Preparatory High School,51.0,404.0,418.0,400.0,730850,,78.0,,407.33
+10X437,Fordham High School For The Arts,48.0,355.0,350.0,372.0,438977,,85.0,,359.0
+10X438,Fordham Leadership Academy For Business And Technology,63.0,367.0,385.0,367.0,918302,x345,78.0,4.0,373.0
+10X439,Bronx High School For Law And Community Service,65.0,366.0,364.0,352.0,869041,x234,,2.0,360.67
+10X440,Dewitt Clinton High School,443.0,419.0,426.0,410.0,367828,x234,85.0,,418.33
+10X442,"Celia Cruz Bronx High School Of Music, The",52.0,423.0,420.0,427.0,202180,x345,,1.0,423.33
+10X445,Bronx High School Of Science,731.0,632.0,688.0,649.0,816688,,,,656.33
+10X475,John F. Kennedy High School,109.0,351.0,362.0,339.0,828171,x345,78.0,3.0,350.67
+10X477,Marble Hill High School For International Studies,99.0,414.0,435.0,414.0,782106,x345,78.0,3.0,421.0
+10X478,Learning To Work Ged At John F. Kennedy,,,,,405704,x345,85.0,,
+10X546,Bronx Theatre High School,68.0,348.0,362.0,354.0,794120,x345,78.0,4.0,354.67
+10X549,Discovery High School,55.0,372.0,379.0,364.0,410088,x234,,,371.67
+10X660,Grace Dodge Career And Technical Education High School,73.0,362.0,382.0,356.0,370212,,85.0,,366.67
+10X667,Grace Dodge Yabc,10.0,350.0,356.0,317.0,220963,x345,,4.0,341.0
+10X696,High School Of American Studies At Lehman College,92.0,636.0,648.0,636.0,276137,x345,,1.0,640.0
+11X249,Bronx Health Sciences High School,74.0,370.0,381.0,382.0,264250,,,4.0,377.67
+11X253,Bronx High School For Writing And Communication Arts,46.0,400.0,357.0,390.0,176092,x123,,3.0,382.33
+11X265,Bronx Lab School,81.0,377.0,391.0,367.0,350123,x123,78.0,4.0,378.33
+11X270,Academy For Scholarship And Entrepreneurship: A College Board School,56.0,386.0,394.0,361.0,112591,x234,85.0,3.0,380.33
+11X275,High School Of Computers And Technology,72.0,381.0,376.0,354.0,244509,x123,,3.0,370.33
+11X288,Collegiate Institute For Math And Science,97.0,444.0,471.0,433.0,929871,,92.0,3.0,449.33
+11X290,Bronx Academy Of Health Careers,69.0,387.0,365.0,383.0,465490,x345,78.0,4.0,378.33
+11X299,Astor Collegiate Academy,60.0,387.0,391.0,391.0,421151,x345,92.0,,389.67
+11X415,Christopher Columbus High School,121.0,367.0,361.0,353.0,222860,x345,,,360.33
+11X417,Young Adult Borough Cntr Christopher Columbus Hs,,,,,766286,x123,92.0,4.0,
+11X418,Bronx High School For The Visual Arts,48.0,419.0,433.0,416.0,754398,x345,78.0,,422.67
+11X455,Harry S Truman High School,189.0,386.0,397.0,368.0,913285,x234,78.0,1.0,383.67
+11X456,Learning To Work Yabc At Truman High School,,,,,436202,,,4.0,
+11X513,New World High School,72.0,332.0,381.0,335.0,406117,x345,78.0,3.0,349.33
+11X514,The Bronxwood Preparatory Academy,48.0,377.0,372.0,363.0,364885,,85.0,2.0,370.67
+11X541,Global Enterprise High School,57.0,372.0,382.0,375.0,781847,x234,85.0,4.0,376.33
+11X542,Pelham Preparatory Academy,76.0,431.0,438.0,419.0,229514,,,2.0,429.33
+11X544,High School For Contemporary Arts,55.0,383.0,378.0,365.0,330785,,92.0,4.0,375.33
+11X545,Bronx Aerospace High School,46.0,388.0,393.0,382.0,312943,x234,,2.0,387.67
+12X245,New Day Academy,25.0,348.0,344.0,354.0,827833,x234,85.0,2.0,348.67
+12X248,"Metropolitan High School, The",49.0,347.0,367.0,341.0,653086,,85.0,1.0,351.67
+12X251,Explorations Academy,57.0,381.0,381.0,360.0,183547,x345,,2.0,374.0
+12X262,Performance Conservatory High School,30.0,361.0,353.0,360.0,105176,x123,85.0,,358.0
+12X267,Bronx Latin,36.0,408.0,432.0,411.0,871863,,85.0,1.0,417.0
+12X271,East Bronx Academy For The Future,46.0,366.0,378.0,358.0,267221,,,3.0,367.33
+12X278,Peace And Diversity Academy,34.0,390.0,401.0,364.0,461474,,85.0,3.0,385.0
+12X388,Pan American International High School At Monroe,30.0,321.0,351.0,298.0,963012,x234,85.0,3.0,323.33
+12X428,Learning To Work Yabc At Monroe Academy,,,,,714682,x123,92.0,,
+12X446,Arturo A. Schomburg Satellite Academy Bronx,14.0,380.0,372.0,349.0,744847,x123,78.0,4.0,367.0
+12X478,The Cinema School,,,,,153298,x345,85.0,,
+12X479,Bronx Career And College Preparatory High School,,,,,454198,x123,85.0,1.0,
+12X480,Bronx Regional High School,16.0,398.0,385.0,398.0,820126,x123,,3.0,393.67
+12X550,High School Of World Cultures,42.0,304.0,323.0,312.0,502593,x234,85.0,3.0,313.0
+12X682,Fannie Lou Hamer Freedom High School,72.0,342.0,346.0,341.0,620341,,,3.0,343.0
+12X684,Wings Academy,66.0,378.0,374.0,362.0,622580,x345,,,371.33
+12X690,Monroe Academy For Business/Law,31.0,375.0,387.0,376.0,489113,x123,92.0,2.0,379.33
+12X692,Monroe Academy For Visual Arts & Design,43.0,332.0,357.0,349.0,120278,x234,,2.0,346.0
+13K265,Dr. Susan S. Mckinney Secondary School Of The Arts,29.0,352.0,349.0,373.0,428147,,,1.0,358.0
+13K336,Academy Of Business And Community Development,9.0,439.0,374.0,418.0,854662,x345,78.0,2.0,410.33
+13K350,Urban Assembly High School Of Music And Art,52.0,360.0,364.0,356.0,185326,x123,78.0,1.0,360.0
+13K412,"Brooklyn Community High School Of Communication, Arts And Media",37.0,375.0,355.0,384.0,714886,,78.0,3.0,371.33
+13K419,"Science Skills Center High School For Science, Technology And The Creative Arts",92.0,399.0,417.0,395.0,160939,x234,92.0,3.0,403.67
+13K430,Brooklyn Technical High School,1277.0,587.0,659.0,587.0,898973,x234,,4.0,611.0
+13K439,Brooklyn International High School,90.0,305.0,364.0,312.0,220419,,,,327.0
+13K483,The Urban Assembly School For Law And Justice,105.0,400.0,417.0,389.0,702270,x234,92.0,2.0,402.0
+13K499,Acorn Community High School,72.0,384.0,364.0,368.0,987014,x234,92.0,1.0,372.0
+13K509,Freedom Academy High School,29.0,400.0,390.0,403.0,856792,x345,,3.0,397.67
+13K527,Urban Assembly Institute Of Math And Science For Young Women,,,,,993861,x123,78.0,2.0,
+13K553,Brooklyn Academy High School,8.0,435.0,383.0,379.0,967293,x345,,2.0,399.0
+13K575,Bedford Stuyvesant Preparatory High School,13.0,398.0,391.0,394.0,684044,x345,92.0,1.0,394.33
+13K595,Bedford Academy High School,89.0,438.0,443.0,431.0,805113,,85.0,,437.33
+13K605,George Westinghouse Career And Technical Education High School,85.0,406.0,391.0,392.0,937579,x234,,,396.33
+13K616,Brooklyn High School For Leadership And Community Service,,,,,628368,,85.0,,
+13K670,Benjamin Banneker Academy,185.0,471.0,472.0,448.0,578072,x345,,3.0,463.67
+13K674,"City Polytechnic High School Of Engineering, Architecture, And Technology",20.0,441.0,499.0,413.0,760103,x123,,1.0,451.0
+14K071,Juan Morel Campos Secondary School,102.0,365.0,361.0,359.0,257116,x123,78.0,4.0,361.67
+14K322,Foundations Academy,,,,,685517,x345,85.0,,
+14K404,Academy For Young Writers,68.0,387.0,357.0,381.0,994723,x345,78.0,,375.0
+14K449,"Brooklyn Latin School, The",72.0,586.0,584.0,570.0,384706,x345,78.0,2.0,580.0
+14K454,Green School: An Academy For Environmental Careers,41.0,407.0,386.0,396.0,806744,x234,,3.0,396.33
+14K474,Progress High School For Professional Careers,144.0,364.0,379.0,371.0,445223,x234,78.0,4.0,371.33
+14K477,School For Legal Studies,134.0,413.0,396.0,395.0,809381,x345,78.0,1.0,401.33
+14K478,"The High School For Enterprise, Business And Technology",142.0,398.0,421.0,396.0,758599,x345,78.0,4.0,405.0
+14K488,Brooklyn Preparatory High School,42.0,367.0,373.0,350.0,954096,x345,78.0,4.0,363.33
+14K558,Williamsburg High School For Architecture And Design,72.0,363.0,385.0,364.0,887022,x234,,4.0,370.67
+14K561,Williamsburg Preparatory School,113.0,397.0,410.0,380.0,515769,,85.0,2.0,395.67
+14K586,Lyons Community School,31.0,371.0,377.0,355.0,205730,,92.0,1.0,367.67
+14K610,Automotive High School,94.0,367.0,376.0,350.0,168856,x123,85.0,3.0,364.33
+14K632,Frances Perkins Academy,12.0,382.0,372.0,368.0,770235,x345,78.0,3.0,374.0
+14K685,El Puente Academy For Peace And Justice,28.0,359.0,335.0,341.0,688392,x345,92.0,4.0,345.0
+14K923,Automotive High School Yabc,,,,,486066,x123,85.0,,
+15K429,Brooklyn School For Global Studies,52.0,361.0,367.0,383.0,718798,x234,92.0,1.0,370.33
+15K448,Brooklyn Secondary School For Collaborative Studies,76.0,393.0,399.0,387.0,724775,x234,,3.0,393.0
+15K462,Secondary School For Law,59.0,398.0,411.0,394.0,637125,x123,,3.0,401.0
+15K463,Secondary School For Journalism,58.0,397.0,391.0,381.0,702205,x123,,4.0,389.67
+15K464,Park Slope Collegiate,72.0,379.0,416.0,380.0,681987,x345,85.0,1.0,391.67
+15K497,School For International Studies,64.0,405.0,415.0,392.0,713236,x123,85.0,4.0,404.0
+15K519,Cobble Hill School Of American Studies,77.0,398.0,402.0,385.0,716876,,,,395.0
+15K520,Pacific High School,9.0,352.0,341.0,300.0,619586,x345,92.0,4.0,331.0
+15K529,West Brooklyn Community High School,,,,,101855,x123,,4.0,
+15K530,Metropolitan Corporate Academy High School,28.0,368.0,365.0,368.0,660911,x345,85.0,4.0,367.0
+15K656,Brooklyn High School Of The Arts,141.0,426.0,,411.0,642190,,,,418.5
+15K667,Sunset Park High School,,,,,355095,,,,
+15K698,South Brooklyn Community High School,8.0,430.0,416.0,425.0,203427,x345,92.0,2.0,423.67
+16K393,Frederick Douglass Academy Iv Secondary School,20.0,355.0,355.0,358.0,773581,x234,,4.0,356.0
+16K455,Boys And Girls High School,131.0,365.0,370.0,362.0,573714,x123,78.0,4.0,365.67
+16K498,Brooklyn High School For Law And Technology,46.0,362.0,372.0,358.0,669948,x123,78.0,2.0,364.0
+16K594,Gotham Professional Arts Academy,36.0,370.0,372.0,351.0,147508,x123,,2.0,364.33
+16K688,The Brooklyn Academy Of Global Finance,,,,,521978,x345,85.0,3.0,
+17K382,Academy For College Preparation And Career Exploration: A College Board School,59.0,396.0,374.0,369.0,641887,x234,92.0,4.0,379.67
+17K408,Academy Of Hospitality And Tourism,57.0,352.0,342.0,351.0,770770,x234,85.0,3.0,348.33
+17K467,Erasmus Yabc,,,,,703472,,,4.0,
+17K489,W.E.B. Dubois Academic High School,7.0,394.0,364.0,334.0,974876,x123,85.0,1.0,364.0
+17K524,International High School At Prospect Heights,71.0,287.0,335.0,291.0,753042,x234,85.0,,304.33
+17K528,The High School For Global Citizenship,46.0,403.0,385.0,388.0,963941,x123,,4.0,392.0
+17K531,"School For Human Rights, The",35.0,348.0,381.0,359.0,626205,x123,85.0,4.0,362.67
+17K533,School For Democracy And Leadership,38.0,377.0,404.0,372.0,534601,x123,78.0,4.0,384.33
+17K537,High School For Youth And Community Development At Erasmus,73.0,338.0,349.0,340.0,613892,x234,85.0,1.0,342.33
+17K539,High School For Service & Learning At Erasmus,61.0,362.0,375.0,368.0,513499,,78.0,3.0,368.33
+17K543,"Science, Technology And Research Early College High School At Erasmus",69.0,457.0,462.0,441.0,999398,x345,85.0,,453.33
+17K544,International Arts Business School,54.0,386.0,391.0,369.0,637954,x234,78.0,2.0,382.0
+17K546,High School For Public Service: Heroes Of Tomorrow,79.0,418.0,441.0,414.0,936098,x345,,2.0,424.33
+17K547,Brooklyn Academy Of Science And The Environment,63.0,388.0,382.0,373.0,364993,,85.0,2.0,381.0
+17K548,Brooklyn School For Music & Theatre,48.0,385.0,393.0,373.0,932462,,78.0,1.0,383.67
+17K568,Brownsville Academy High School,16.0,372.0,356.0,335.0,641859,x345,85.0,3.0,354.33
+17K590,Medgar Evers College Preparatory School,165.0,476.0,481.0,479.0,761877,,78.0,3.0,478.67
+17K600,Clara Barton High School,259.0,425.0,413.0,413.0,876998,x345,85.0,,417.0
+17K625,Paul Robeson High School,53.0,365.0,363.0,355.0,976683,x234,92.0,4.0,361.0
+17K751,Academy For Health Careers,,,,,197845,x123,78.0,1.0,
+18K563,It Takes A Village Academy,56.0,313.0,320.0,330.0,418405,x345,85.0,4.0,321.0
+18K566,Brooklyn Generation School,29.0,374.0,377.0,394.0,912222,x123,,1.0,381.67
+18K567,Brooklyn Theatre Arts High School,54.0,383.0,358.0,377.0,174472,x345,78.0,1.0,372.67
+18K569,Kurt Hahn Expeditionary Learning School,43.0,368.0,378.0,346.0,949243,x123,85.0,2.0,364.0
+18K576,Victory Collegiate High School,63.0,387.0,377.0,379.0,412625,x234,85.0,3.0,381.0
+18K578,Brooklyn Bridge Academy,17.0,384.0,362.0,351.0,440929,,92.0,2.0,365.67
+18K589,Arts & Media Preparatory Academy,48.0,361.0,360.0,359.0,238681,x234,,,360.0
+18K617,High School For Innovation In Advertising And Media,37.0,404.0,393.0,386.0,927628,,78.0,3.0,394.33
+18K629,Cultural Academy For The Arts And Sciences,33.0,393.0,395.0,381.0,827492,x345,85.0,3.0,389.67
+18K633,High School For Medical Professions,75.0,386.0,380.0,393.0,969796,x234,,3.0,386.33
+18K635,Olympus Academy,7.0,400.0,370.0,370.0,314591,,85.0,4.0,380.0
+18K637,Academy For Conservation And The Environment,35.0,363.0,381.0,367.0,483922,,78.0,,370.33
+18K642,Urban Action Academy,40.0,376.0,385.0,374.0,913691,,92.0,2.0,378.33
+18K673,East Brooklyn Community High School,12.0,410.0,403.0,378.0,102816,x234,78.0,2.0,397.0
+19K409,East New York Family Academy,54.0,416.0,432.0,394.0,839838,x345,85.0,2.0,414.0
+19K420,Franklin K. Lane High School,,,,,134918,,78.0,3.0,
+19K431,Thomas Jefferson Yabc,,,,,194950,x345,92.0,2.0,
+19K502,Fdny High School For Fire And Life Safety,37.0,341.0,349.0,333.0,608509,x345,78.0,4.0,341.0
+19K504,High School For Civil Rights,47.0,363.0,349.0,342.0,653979,x234,85.0,1.0,351.33
+19K507,Performing Arts And Technology High School,61.0,380.0,386.0,383.0,785806,,,1.0,383.0
+19K510,World Academy For Total Community Health High School,68.0,371.0,365.0,370.0,398688,x234,85.0,3.0,368.67
+19K583,Multicultural High School,29.0,279.0,322.0,286.0,122756,x345,78.0,3.0,295.67
+19K615,Transit Tech Career And Technical Education High School,182.0,395.0,418.0,380.0,132815,x234,78.0,,397.67
+19K618,Academy Of Innovative Technology,60.0,371.0,371.0,354.0,965429,x123,78.0,4.0,365.33
+19K639,Brooklyn Lab School,57.0,360.0,385.0,363.0,869608,x345,85.0,1.0,369.33
+19K659,Cypress Hills Collegiate Preparatory School,51.0,376.0,385.0,368.0,509280,x123,85.0,1.0,376.33
+19K660,W. H. Maxwell Career And Technical Education High School,74.0,370.0,369.0,363.0,323270,x345,78.0,4.0,367.33
+19K683,"The School For Classics: An Academy Of Thinkers, Writers And Performers",38.0,383.0,400.0,374.0,741399,x123,92.0,4.0,385.67
+20K445,New Utrecht High School,456.0,402.0,471.0,399.0,364847,x123,85.0,4.0,424.0
+20K485,High School Of Telecommunication Arts And Technology,238.0,425.0,474.0,424.0,938208,x234,,4.0,441.0
+20K490,Fort Hamilton High School,694.0,417.0,478.0,411.0,379833,x123,85.0,1.0,435.33
+20K505,Franklin Delano Roosevelt High School,385.0,383.0,486.0,375.0,620218,x345,,3.0,414.67
+20K609,The Urban Assembly School For Criminal Justice,,,,,263315,x123,78.0,,
+20K658,Franklin Delano Roosevelt Yabc,18.0,338.0,477.0,316.0,361605,,78.0,3.0,377.0
+21K337,International High School At Lafayette,54.0,326.0,386.0,314.0,795681,x345,85.0,4.0,342.0
+21K344,Rachel Carson High School For Coastal Studies,54.0,402.0,427.0,408.0,422310,x234,92.0,4.0,412.33
+21K348,High School Of Sports Management,39.0,388.0,398.0,378.0,723511,x345,85.0,4.0,388.0
+21K410,Abraham Lincoln High School,475.0,396.0,437.0,393.0,846740,x123,78.0,2.0,408.67
+21K412/21K411,Abraham Lincoln Yabc/Learning To Work Ged At Abraham Lincoln,,,,,411797,x123,78.0,4.0,
+21K468,Kingsborough Early College School,,,,,569504,x345,78.0,3.0,
+21K525,Edward R. Murrow High School,727.0,468.0,496.0,467.0,258009,x345,85.0,1.0,477.0
+21K540,John Dewey High School,448.0,404.0,468.0,390.0,475475,x345,92.0,3.0,420.67
+21K559,Life Academy High School For Film And Music,40.0,384.0,375.0,365.0,274893,x234,92.0,2.0,374.67
+21K572,Expeditionary Learning School For Community Leaders,40.0,353.0,370.0,356.0,185479,x345,78.0,1.0,359.67
+21K620,William E. Grady Career And Technical Education High School,95.0,394.0,414.0,376.0,192849,x345,,1.0,394.67
+21K690,Brooklyn Studio Secondary School,119.0,429.0,449.0,435.0,704701,x234,85.0,2.0,437.67
+21K728,Liberation Diploma Plus,10.0,411.0,369.0,373.0,502505,x123,85.0,,384.33
+22K405,Midwood High School,824.0,478.0,519.0,476.0,332013,x234,,,491.0
+22K425,James Madison High School,518.0,436.0,475.0,439.0,327087,x234,92.0,1.0,450.0
+22K495,Sheepshead Bay High School,236.0,383.0,392.0,370.0,275480,x345,,,381.67
+22K535,Leon M. Goldstein High School For The Sciences,259.0,524.0,561.0,542.0,667336,x123,92.0,2.0,542.33
+22K555,Brooklyn College Academy,131.0,456.0,456.0,440.0,477867,x234,78.0,4.0,450.67
+23K493,Brooklyn Collegiate: A College Board School,60.0,389.0,409.0,387.0,638267,x345,85.0,2.0,395.0
+23K514,Frederick Douglass Academy Vii High School,55.0,361.0,371.0,359.0,735951,x234,85.0,3.0,363.67
+23K643,Brooklyn Democracy Academy,11.0,349.0,338.0,331.0,452120,x123,78.0,2.0,339.33
+23K646,Aspirations Diploma Plus High School,7.0,311.0,371.0,311.0,160203,,78.0,4.0,331.0
+23K647,Metropolitan Diploma Plus High School,17.0,350.0,346.0,332.0,719582,x345,78.0,,342.67
+23K697,Teachers Preparatory High School,69.0,392.0,416.0,388.0,296255,x234,92.0,1.0,398.67
+24Q264,Academy Of Finance And Enterprise,89.0,405.0,454.0,421.0,654836,,85.0,,426.67
+24Q267,High School Of Applied Communication,39.0,406.0,413.0,400.0,554115,,85.0,1.0,406.33
+24Q293,Civic Leadership Academy,69.0,404.0,429.0,407.0,596521,x345,85.0,4.0,413.33
+24Q296,Pan American International High School,55.0,317.0,323.0,311.0,378878,,78.0,1.0,317.0
+24Q299,Bard High School Early College Ii,155.0,545.0,568.0,550.0,362876,x345,78.0,,554.33
+24Q455,Newtown High School,320.0,383.0,440.0,380.0,344317,x345,92.0,4.0,401.0
+24Q457,Young Adult Borough Center At Arts And Business Hs,,,,,814224,x234,92.0,3.0,
+24Q485,Grover Cleveland High School,241.0,395.0,420.0,396.0,900889,,78.0,2.0,403.67
+24Q520,Middle College High School At Laguardia Community College,58.0,399.0,393.0,385.0,902216,x345,,3.0,392.33
+24Q530,International High School At Laguardia Community College,69.0,326.0,409.0,329.0,855084,x123,92.0,4.0,354.67
+24Q550,High School For Arts And Business,138.0,391.0,403.0,380.0,501780,x234,92.0,2.0,391.33
+24Q560,"Robert F. Wagner, Jr. Secondary School For Arts And Technology",80.0,443.0,447.0,440.0,702975,x345,,,443.33
+24Q600,Queens Vocational And Technical High School,155.0,417.0,447.0,406.0,683431,x234,,4.0,423.33
+24Q610,Aviation Career & Technical Education High School,396.0,445.0,496.0,423.0,777331,,92.0,3.0,454.67
+24Q744,Voyages Preparatory,,,,,120268,x234,85.0,,
+25Q252,"Queens School Of Inquiry, The",58.0,455.0,498.0,443.0,333672,x123,78.0,3.0,465.33
+25Q263,Flushing International High School,45.0,314.0,417.0,318.0,416654,x234,,1.0,349.67
+25Q281,Eastswest School Of International Studies,59.0,416.0,463.0,392.0,208611,x234,,1.0,423.67
+25Q285,World Journalism Preparatory: A College Board School,63.0,471.0,489.0,481.0,900895,x234,,3.0,480.33
+25Q425,John Bowne High School,558.0,397.0,451.0,395.0,636437,x345,78.0,2.0,414.33
+25Q460,Flushing High School,347.0,393.0,441.0,382.0,141602,x123,85.0,1.0,405.33
+25Q467,Flushing Yabc,9.0,378.0,373.0,344.0,223328,x345,78.0,4.0,365.0
+25Q525,Townsend Harris High School,278.0,621.0,651.0,638.0,362526,x123,78.0,1.0,636.67
+25Q540,Queens Academy High School,17.0,398.0,382.0,388.0,661632,,,2.0,389.33
+25Q670,Robert F. Kennedy Community High School,99.0,431.0,458.0,441.0,591892,,92.0,2.0,443.33
+25Q792,North Queens Community High School,7.0,379.0,421.0,377.0,847586,,78.0,1.0,392.33
+26Q415,Benjamin N. Cardozo High School,888.0,480.0,545.0,489.0,375591,x123,78.0,4.0,504.67
+26Q430,Francis Lewis High School,934.0,468.0,539.0,467.0,148605,x123,,1.0,491.33
+26Q435,Martin Van Buren High School,334.0,391.0,397.0,384.0,152888,x345,78.0,3.0,390.67
+26Q495,Bayside High School,708.0,462.0,523.0,464.0,584531,x123,,4.0,483.0
+26Q566,"Queens High School Of Teaching, Liberal Arts And The Sciences",175.0,425.0,434.0,420.0,150229,x234,85.0,4.0,426.33
+27Q260,Frederick Douglass Academy Vi High School,87.0,387.0,385.0,373.0,216311,x123,85.0,3.0,381.67
+27Q262,Channel View School For Research,74.0,432.0,419.0,401.0,968929,x234,78.0,2.0,417.33
+27Q302,"Queens High School For Information, Research, And Technology",44.0,391.0,401.0,364.0,292533,x345,85.0,4.0,385.33
+27Q308,Robert H. Goddard High School Of Communication Arts And Technology,93.0,423.0,426.0,416.0,676177,x345,,4.0,421.67
+27Q309,Academy Of Medical Technology: A College Board School,36.0,367.0,379.0,348.0,933051,,92.0,,364.67
+27Q323,Scholars' Academy,89.0,499.0,537.0,496.0,291769,x123,78.0,3.0,510.67
+27Q400,August Martin High School,101.0,377.0,371.0,360.0,691098,x234,78.0,4.0,369.33
+27Q410,Beach Channel High School,78.0,384.0,396.0,354.0,503694,x234,,1.0,378.0
+27Q475,Richmond Hill High School,404.0,382.0,404.0,368.0,156250,x345,78.0,4.0,384.67
+27Q480,John Adams High School,403.0,391.0,409.0,392.0,863765,,92.0,1.0,397.33
+27Q650,"High School For Construction Trades, Engineering And Architecture",194.0,429.0,491.0,425.0,776444,x123,85.0,3.0,448.33
+28Q284,York Early College Academy,,,,,965048,x345,78.0,4.0,
+28Q310,Queens Collegiate: A College Board School,68.0,420.0,445.0,400.0,880835,x234,78.0,4.0,421.67
+28Q325,Hillside Arts & Letters Academy,,,,,267544,x345,92.0,1.0,
+28Q338,Queens Satellite High School For Opportunity,6.0,403.0,408.0,367.0,553915,x345,92.0,4.0,392.67
+28Q350,Jamaica Gateway To The Sciences,25.0,430.0,452.0,425.0,904223,x234,78.0,2.0,435.67
+28Q440,Forest Hills High School,762.0,456.0,497.0,454.0,597825,x234,78.0,1.0,469.0
+28Q470,Jamaica High School,90.0,342.0,,353.0,587904,x234,92.0,3.0,347.5
+28Q505,Hillcrest High School,462.0,395.0,413.0,386.0,317746,x123,85.0,2.0,398.0
+28Q620,Thomas A. Edison Career And Technical Education High School,422.0,452.0,478.0,442.0,353160,x123,85.0,2.0,457.33
+28Q680,Queens Gateway To Health Sciences Secondary School,99.0,513.0,523.0,502.0,745665,x345,85.0,1.0,512.67
+28Q686,Queens Metropolitan High School,,,,,973896,,78.0,3.0,
+28Q687,Queens High School For The Sciences At York College,121.0,612.0,660.0,596.0,936593,,92.0,2.0,622.67
+28Q690,High School For Law Enforcement And Public Safety,74.0,406.0,406.0,384.0,216035,x234,,4.0,398.67
+28Q896,"Young Women'S Leadership School, Queens",68.0,439.0,445.0,432.0,597664,x123,92.0,1.0,438.67
+29Q248,Queens Preparatory Academy,52.0,360.0,380.0,359.0,505363,x123,85.0,,366.33
+29Q259,Pathways College Preparatory School: A College Board School,46.0,401.0,397.0,375.0,231477,,92.0,1.0,391.0
+29Q265,Excelsior Preparatory High School,49.0,402.0,398.0,402.0,268657,x123,85.0,,400.67
+29Q272,George Washington Carver High School For The Sciences,59.0,436.0,427.0,424.0,458826,x123,92.0,2.0,429.0
+29Q283,Preparatory Academy For Writers: A College Board School,43.0,370.0,,363.0,462173,x345,85.0,3.0,366.5
+29Q326,Cambria Heights Academy,,,,,666479,x123,78.0,,
+29Q492,"Mathematics, Science Research And Technology Magnet High School",78.0,400.0,426.0,394.0,790855,x345,92.0,,406.67
+29Q494,"Law, Government And Community Service High School",52.0,385.0,377.0,377.0,245490,x123,85.0,,379.67
+29Q496,"Business, Computer Applications & Entrepreneurship High School",49.0,379.0,414.0,359.0,455709,x123,,3.0,384.0
+29Q498,Humanities & Arts Magnet High School,62.0,393.0,381.0,377.0,341277,x123,78.0,,383.67
+30Q286,"Young Women'S Leadership School, Astoria",,,,,336296,,78.0,2.0,
+30Q301,Academy For Careers In Television And Film,98.0,410.0,440.0,405.0,515061,x123,78.0,4.0,418.33
+30Q445,William Cullen Bryant High School,395.0,414.0,449.0,412.0,894217,,85.0,4.0,425.0
+30Q450,Long Island City High School,392.0,403.0,420.0,395.0,352878,x345,92.0,3.0,406.0
+30Q501,Frank Sinatra School Of The Arts High School,174.0,504.0,496.0,494.0,794171,,92.0,2.0,498.0
+30Q502,Information Technology High School,148.0,407.0,434.0,398.0,730551,x345,,4.0,413.0
+30Q555,Newcomers High School,143.0,323.0,475.0,329.0,305938,x123,78.0,2.0,375.67
+30Q575,Academy Of American Studies,135.0,487.0,492.0,491.0,180221,x345,,4.0,490.0
+30Q580,Baccalaureate School For Global Education,61.0,524.0,568.0,544.0,595723,x345,78.0,3.0,545.33
+31R047,Csi High School For International Studies,137.0,452.0,451.0,450.0,654645,x345,92.0,4.0,451.0
+31R064,Gaynor Mccown Expeditionary Learning School,61.0,398.0,412.0,385.0,140691,x123,92.0,1.0,398.33
+31R080,The Michael J. Petrides School,107.0,472.0,488.0,466.0,844244,x123,,1.0,475.33
+31R440,New Dorp High School,391.0,424.0,437.0,416.0,909567,x345,92.0,1.0,425.67
+31R445,Port Richmond High School,271.0,424.0,438.0,417.0,145678,x234,,3.0,426.33
+31R450,Curtis High School,375.0,437.0,435.0,429.0,315495,x234,92.0,4.0,433.67
+31R455,Tottenville High School,807.0,462.0,486.0,470.0,308512,x123,92.0,,472.67
+31R460,Susan E. Wagner High School,535.0,455.0,474.0,459.0,240660,x123,,2.0,462.67
+31R470,Concord High School,10.0,466.0,455.0,414.0,974386,,,3.0,445.0
+31R600,Ralph R. Mckee Career And Technical Education High School,94.0,416.0,422.0,397.0,730239,x234,85.0,3.0,411.67
+31R605,Staten Island Technical High School,227.0,635.0,682.0,636.0,739097,x123,,2.0,651.0
+31R607,Young Adult Borough Center At Staten Is Tech Hs,10.0,405.0,375.0,370.0,653176,x345,78.0,1.0,383.33
+32K403,Academy For Environmental Leadership,50.0,380.0,366.0,352.0,501650,x345,92.0,,366.0
+32K545,Ebc High School For Public Service–Bushwick,88.0,384.0,409.0,361.0,221431,,85.0,3.0,384.67
+32K549,Bushwick School For Social Justice,75.0,348.0,353.0,334.0,954491,x234,85.0,3.0,345.0
+32K552,Academy Of Urban Planning,67.0,342.0,364.0,354.0,695572,x234,92.0,3.0,353.33
+32K554,All City Leadership Secondary School,39.0,428.0,465.0,422.0,587220,,,2.0,438.33
+32K556,Bushwick Leaders High School For Academic Excellence,23.0,347.0,358.0,350.0,658210,,92.0,2.0,351.67
+32K564,Bushwick Community High School,24.0,359.0,317.0,358.0,898918,,92.0,4.0,344.67
+75K371,P.S. 371 S Lillian L. Rashkis,,,,,240795,x234,85.0,1.0,
+75M035,P.S. 035,,,,,861847,x123,,4.0,
+75Q256,P.S. Q256,,,,,320205,x234,85.0,1.0,
+75Q811,P.S. Q811,32.0,429.0,444.0,433.0,467937,x123,78.0,1.0,435.33
+75R025,South Richmond High School I.S./P.S. 25,,,,,789985,,78.0,1.0,
+75X012,P.S. X012 Lewis And Clark School,,,,,733698,x234,92.0,1.0,
+75X754,J. M. Rapport School Career Development,,,,,976034,x345,,4.0,
+79M645,School For Cooperative Technical Education,,,,,556924,x123,85.0,1.0,
+79Q950,Ged Plus S Citywide,8.0,496.0,400.0,426.0,544514,x234,92.0,2.0,440.67
+79X490,Phoenix Academy,9.0,367.0,370.0,360.0,248647,x234,85.0,,365.67
