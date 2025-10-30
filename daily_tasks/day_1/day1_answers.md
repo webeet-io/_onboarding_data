@@ -5,13 +5,13 @@
 
 ### Answers:
 - Total rows: 6,310
-- Unique schools: 2325
+- Unique schools: 1890
 - Most frequent incident type: “Non-Criminal Incidents”
 - Bronx incident %:
          Major Crimes:	27.12%	Property Crimes: 22.82%	Violent Crimes: 30.35%
          Other Crimes:	26.99%		
          Non-Criminal Incidents:	30.63%		
-		     Percentage of total numberof Incidents:	28.38%		
+		 Percentage of total number of Incidents:	28.24%		
 
 ### Observations:
 - Out of the 15 schools with the most incident reports, 6 are located in the Bronx
