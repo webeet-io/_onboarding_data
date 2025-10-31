@@ -1,0 +1,39 @@
+# 🧠 Day 4 — SAT Results Analysis (DuckDB)
+
+**Author:** Robert Sesazi  
+**Program:** Masterschool – Data Analytics  
+**Date:** October 31, 2025  
+
+---
+
+
+This project analyzes SAT results using **DuckDB** inside **Google Colab**.
+The dataset contains SAT performance by school, and the analysis focuses on cleaning, exploring, and answering analytical questions with SQL.
+
+---
+
+## 🧹 Data Cleaning Summary
+- Raw rows: 493  
+- Clean rows: 478  
+- Duplicates dropped: 15  
+- Missing scores handled (converted to NaN)
+- Valid SAT score range enforced (200–800)
+
+Cleaned dataset exported as: `cleaned_sat_results.csv`
+
+---
+
+## 🦆 Database Setup
+A local DuckDB file `sat_project.duckdb` was created with one main table:
+
+**Table:** `sat_results`  
+**Rows:** 478  
+**Columns:** dbn, school_name, num_of_test_takers, critical_reading_avg, math_avg, writing_avg
+
+---
+
+##  SQL Queries and Answers
+
+### 1️ Total rows in dataset
+```sql
+SELECT COUNT(*) AS total_rows FROM sat_results;
