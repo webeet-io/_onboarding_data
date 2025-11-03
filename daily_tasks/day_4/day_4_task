@@ -1,0 +1,35 @@
+# 📊 Project Data Processing Summary: NYC SAT Data Cleaning and Integration
+
+## 1. Data Cleaning and Feature Engineering Logic
+
+The primary goal was to validate the data and prepare it for database storage by enforcing standardization and data integrity rules.
+
+| Cleaning Step | Action Taken | Rationale |
+| :--- | :--- | :--- |
+| **Column Selection** | Dropped irrelevant/duplicate columns (e.g., `SAT Critical Readng Avg. Score`, `internal_school_id`, `contact_extension`). | Streamlined the dataset to only necessary fields. |
+| **Name Standardization** | Converted column names to **snake\_case**; removed special characters. | Ensures consistency and easy querying in SQL. |
+| **Data Validation** | Removed **exact duplicates** and enforced a unique entry for each **DBN** (keeping the first occurrence). | Guarantees data integrity and correct primary key usage. |
+| **Score Validation** | SAT component scores were checked, and values **outside the official 200-800 range were set to NULL**. | Enforces data integrity against the official scoring scale. |
+| **Percentage Cleaning** | Removed '%' signs, converted to numeric, and validated the 0-100 range. | Prepares `pct_students_tested` for the `DECIMAL` field type. |
+| **Feature Creation** | **`sat_total_score`** was calculated. If all three component scores were missing (NULL), the total was **explicitly set to NULL (pd.NA)**. | Creates the core analysis metric while preventing misleading zero totals. |
+
+---
+
+## 2. Database Integration Strategy
+
+The cleaned data was saved to a CSV for backup, then uploaded to PostgreSQL using SQLAlchemy and Pandas.
+
+| Destination Table | `onyi_ugba_sat_scores` |
+| :--- | :--- |
+| **Primary Key** | `dbn` (**VARCHAR**) |
+| **Total Records** | 478 |
+| **Integration Method** | `df_clean.to_sql(..., if_exists="replace")` |
+| **Data Snapshot** | A **`df_clean.csv`** file was created *before* the database upload for portable backup and verification. |
+| **Type Alignment** | Pandas' **nullable integer (`Int64`)** was used for scores, mapping correctly to PostgreSQL's **INTEGER** column, which allows NULLs. |
+
+---
+
+## 3. 🚩 Challenges Encountered
+
+* **Tooling/Environment:** Significant difficulty integrating **VS Code, Python, and PostgreSQL** due to unfamiliarity with the required connection string formats, SQLAlchemy syntax, and library setup.
+* **Data Consistency:** Ensuring that Pandas' specific handling of **missing integer data (`pd.NA`)** correctly translated to a true **NULL** value in the PostgreSQL `INTEGER` column, which was vital for the integrity of the calculated `sat_total_score`.
