@@ -6,7 +6,7 @@
 
 ### Answers:
 
-- **Total rows:** 6310  
+- **Total rows:** 6310  .
 - **Unique schools:** 1890  
 - **Bronx incident %:** 28.24%  
 - **Total incidents (major_n):** 1781  
