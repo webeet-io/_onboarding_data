@@ -1,7 +1,7 @@
 **Day 1 – School Incident Analysis**
 **👩‍💻 By Nuran Nalci – Data Analyst Intern**
 
-🔗 [My Google Sheet – School Safety Report]([https://docs.google.com/spreadsheets/d/1aaSNyEsa26hPVm-0xkIGqxqEBAaO7V65rtyIFnd7ONE/edit?usp=sharing])
+🔗 [My Google Sheet – School Safety Report](https://docs.google.com/spreadsheets/d/1wL54b7l4BmEIXSZ5w-U2hvjhfPTona2hNaFavOyt_s4/edit?usp=sharing)
 *(The file is shared as “Anyone with the link – Viewer”)*  
 
 **🎯 Objective**  
@@ -29,7 +29,7 @@ After cleaning, the dataset became easier to read and ready for analysis.
 → “NoCrim N” (Non-criminal or minor incidents)  
 
 4️⃣ Percentage of incidents that occurred in the Bronx: 
-→ 33.37 %  
+→ 29.18 %  
 
 5️⃣ Interesting findings / anomalies:
 - Some schools in the Bronx report **much higher incidents** than others with similar size.  
