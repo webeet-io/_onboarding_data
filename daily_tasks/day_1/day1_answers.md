@@ -1,30 +1,59 @@
-## 📊 School Safety Data Analysis Report
+**Day 1 – School Incident Analysis**
+**👩‍💻 By Nuran Nalci – Data Analyst Intern**
 
-This report summarizes key statistics and findings from the provided dataset.
+🔗 [My Google Sheet – School Safety Report](https://docs.google.com/spreadsheets/d/1wL54b7l4BmEIXSZ5w-U2hvjhfPTona2hNaFavOyt_s4/edit?usp=sharing)
+*(The file is shared as “Anyone with the link – Viewer”)*  
+
+**🎯 Objective**  
+The goal of this task was to explore a real dataset about **school safety incidents in New York City**, perform basic data cleaning, and answer a few analytical questions using **Google Sheets**.  
+This exercise helped me learn how to handle missing values, calculate totals and percentages, and identify interesting trends in the data.  
+
+**🧹 Data Cleaning Process**  
+Before starting the analysis, I cleaned the dataset with the following steps:  
+- Removed **empty rows** and unnecessary blank cells.  
+- Checked for **“N/A” values** and made sure they didn’t affect my calculations.  
+- Kept all important columns related to incidents (Major N, Oth N, NoCrim N, Prop N, Vio N).  
+- Verified that the **Borough Name** column contained all five regions (Bronx, Brooklyn, Manhattan, Queens, Staten Island).  
+
+After cleaning, the dataset became easier to read and ready for analysis.  
+
+**✅ Analytical Answers**
+
+1️⃣ Total number of rows: 
+→ 6,310  
+
+2️⃣ Number of unique schools: 
+→ 1891  
+
+3️⃣ Most frequent incident type: 
+→ “NoCrim N” (Non-criminal or minor incidents)  
+
+4️⃣ Percentage of incidents that occurred in the Bronx: 
+→ 28.23 %  
+
+5️⃣ Interesting findings / anomalies:
+- Some schools in the Bronx report **much higher incidents** than others with similar size.  
+- The **“NoCrim N”** type makes up the majority of all incidents, showing that most events are **non-criminal issues** (like fights or behavioral problems).  
+- A few schools have **zero incidents** reported, which may indicate **missing or incomplete data**, not necessarily perfect safety.  
+
+---
+**💡 Observations and Insights**
+
+1️⃣ High number of incidents in Bronx
+Bronx schools have a noticeably higher share of incidents (around 28%), suggesting that this area might have higher student density or different reporting patterns.  
+
+2️⃣ Most incidents are minor  
+The majority of reported cases are labeled as “NoCrim N”, meaning most school events are related to discipline or minor conflicts rather than serious crimes.  
+
+3️⃣ Possible data inconsistency
+Some schools with “0 incidents” could reflect missing reports.  
+It shows how important **data quality** is in real-world datasets.  
 
 ---
 
-### 🔢 **Basic Data Statistics**
+**📝 Summary**
+This first day task helped me get comfortable with **Google Sheets formulas** and **basic data exploration**.  
+I learned how to apply filters, count unique values, calculate percentages, and write short observations.  
+It was a simple but very practical introduction to how real-world datasets look and how to work with them effectively.
 
-| Metric | Answer | Notes |
-| :--- | :--- | :--- |
-| **Total Rows** | **6,310** | Total records in the dataset. |
-| **Unique Schools** | **1,890** | Total number of unique school entities listed. |
-| **Most Frequent Incident Type** | **nocrim\_n** | This category has the highest total count of incidents: **11,772**. |
-| **Incidents in The Bronx (%)** | **28.24%** | Percentage of all incidents that occurred within The Bronx. |
 
----
-
-### 💡 **Interesting Findings & Anomalies**
-
-| Finding Type | Observation | Significance |
-| :--- | :--- | :--- |
-| **Extreme Anomaly: Crime Rate** | One school has a total student **register of only 3**, yet it reported **4 incidents** (total of `major_n`, `oth_n`, `nocrim_n`, `prop_n`, `vio_n`). | This represents an **extremely high per-student incident rate**, indicating a potential issue with data entry, classification, or a serious safety problem at a very small location. |
-
----
-
-### 🔗 **Data Source**
-
-You can review the full dataset and calculations here:
-
-[Google Sheet Data Link](https://docs.google.com/spreadsheets/d/1_Vfm-bJgPJsfThlgo0MAIRe7PJIBy3OKE1J5yobvJlQ/edit?usp=sharing)
