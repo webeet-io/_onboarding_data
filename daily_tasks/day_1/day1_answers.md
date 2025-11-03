@@ -29,7 +29,7 @@ After cleaning, the dataset became easier to read and ready for analysis.
 → “NoCrim N” (Non-criminal or minor incidents)  
 
 4️⃣ Percentage of incidents that occurred in the Bronx: 
-→ 29.18 %  
+→ 28.23 %  
 
 5️⃣ Interesting findings / anomalies:
 - Some schools in the Bronx report **much higher incidents** than others with similar size.  
